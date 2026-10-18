@@ -103,6 +103,36 @@
       "slug": "lenovo",
       "name": "Lenovo",
       "categoryId": "cat-laptops"
+    },
+    {
+      "id": "b-oppo",
+      "slug": "oppo",
+      "name": "OPPO",
+      "categoryId": "cat-phones"
+    },
+    {
+      "id": "b-vivo",
+      "slug": "vivo",
+      "name": "Vivo",
+      "categoryId": "cat-phones"
+    },
+    {
+      "id": "b-google",
+      "slug": "google",
+      "name": "Google",
+      "categoryId": "cat-phones"
+    },
+    {
+      "id": "b-poco",
+      "slug": "poco",
+      "name": "Poco",
+      "categoryId": "cat-phones"
+    },
+    {
+      "id": "b-realme",
+      "slug": "realme",
+      "name": "Realme",
+      "categoryId": "cat-phones"
     }
   ],
   "deviceModels": [
@@ -412,9 +442,825 @@
           "priceOffset": 0
         }
       ]
+    },
+    {
+      "id": "dm-reno15pro",
+      "slug": "oppo-reno15-pro",
+      "name": "OPPO Reno15 Pro 5G",
+      "categoryId": "cat-phones",
+      "brandId": "b-oppo",
+      "baseResalePrice": 38000,
+      "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2026,
+      "variants": [
+        {
+          "id": "v-reno15p-256",
+          "modelId": "dm-reno15pro",
+          "title": "12 GB RAM / 256 GB",
+          "storage": "256GB",
+          "ram": "12GB",
+          "priceOffset": 0
+        },
+        {
+          "id": "v-reno15p-512",
+          "modelId": "dm-reno15pro",
+          "title": "12 GB RAM / 512 GB",
+          "storage": "512GB",
+          "ram": "12GB",
+          "priceOffset": 6000
+        }
+      ]
     }
   ],
   "refurbishedProducts": [
+    {
+      "id": "laptop-lenovo-x1-carbon",
+      "slug": "lenovo-thinkpad-x1-carbon-gen-9-refurbished",
+      "title": "Lenovo ThinkPad X1 Carbon Gen 9 (Intel Core i7 11th Gen)- Refurbished",
+      "categoryId": "cat-laptops",
+      "categoryName": "Laptops",
+      "brandId": "b-lenovo",
+      "brandName": "Lenovo",
+      "modelId": "dm-macm2",
+      "mrpPrice": 89999,
+      "sellbarPrice": 44999,
+      "stockCount": 3,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 91,
+      "color": "Black Carbon Weave",
+      "colors": [
+        "Black Carbon Weave"
+      ],
+      "storage": "512GB SSD",
+      "ram": "16GB LPDDR4x",
+      "availableStorages": [
+        "16GB RAM / 512GB SSD",
+        "16GB RAM / 1TB SSD"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/laptop-lenovo-thinkpad.webp"
+      ],
+      "specifications": {
+        "Display": "14.0-inch 16:10 WUXGA (1920x1200) IPS Low Power 400 nits Anti-Glare",
+        "Processor": "Intel Core i7-1165G7 11th Gen (4 Cores, 8 Threads up to 4.70 GHz)",
+        "Memory": "16GB LPDDR4x 4266MHz Soldered",
+        "Storage": "512GB SSD M.2 2280 PCIe NVMe Opal2",
+        "Security": "Match-on-Chip Fingerprint reader, IR Camera for Windows Hello, PrivacyShutter",
+        "Operating System": "Windows 11 Pro Genuine",
+        "Weight": "1.13 kg Featherweight Carbon Fiber Chassis",
+        "Warranty": "6 Months Sellbar Comprehensive Warranty"
+      },
+      "description": "Premium business ultrabook: 1.13kg ultra-light carbon weave chassis, 16:10 productivity display, Intel Core i7 power, and 6 months doorstep warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.7,
+      "reviewsCount": 31,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "laptop-macbook-air-m1",
+      "slug": "apple-macbook-air-2020-m1-8gb-256gb-refurbished",
+      "title": "Apple MacBook Air 2020 (Apple M1 / 8GB / 256GB SSD)- Refurbished",
+      "categoryId": "cat-laptops",
+      "categoryName": "Laptops",
+      "brandId": "b-apple",
+      "brandName": "Apple",
+      "modelId": "dm-macm2",
+      "mrpPrice": 92900,
+      "sellbarPrice": 46999,
+      "stockCount": 8,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 95,
+      "color": "Space Gray",
+      "colors": [
+        "Space Gray",
+        "Silver",
+        "Gold"
+      ],
+      "storage": "256GB SSD",
+      "ram": "8GB Unified",
+      "availableStorages": [
+        "8GB Unified / 256GB SSD",
+        "8GB Unified / 512GB SSD"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/laptop-macbook-pro-m3.webp"
+      ],
+      "specifications": {
+        "Display": "13.3-inch Retina Display with True Tone (2560 x 1600)",
+        "Processor": "Apple M1 chip (8-core CPU, 7-core GPU, 16-core Neural Engine)",
+        "Memory": "8GB Unified Memory",
+        "Storage": "256GB SSD storage",
+        "Battery Life": "Up to 18 hours wireless web & video playback",
+        "Weight": "1.29 kg Fanless Silent Design",
+        "Operating System": "macOS Sequoia factory refreshed",
+        "Included in Box": "Sellbar Eco-Packaging, 30W USB-C Power Adapter & 2m USB-C Charge Cable",
+        "Warranty": "6 Months Sellbar Doorstep Warranty"
+      },
+      "description": "Iconic Apple Silicon MacBook Air: Super silent fanless design, up to 18-hour battery endurance, and crisp Retina display with 6 months warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewsCount": 168,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "laptop-dell-5320",
+      "slug": "dell-latitude-5000-series-5320-intel-core-i5-refurbished",
+      "title": "Dell Latitude 5000 Series 5320 (Intel Core i5 11th Gen 13.3 Inch)- Refurbished",
+      "categoryId": "cat-laptops",
+      "categoryName": "Laptops",
+      "brandId": "b-dell",
+      "brandName": "Dell",
+      "modelId": "dm-dellxps",
+      "mrpPrice": 55000,
+      "sellbarPrice": 34499,
+      "stockCount": 5,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 92,
+      "color": "Titan Gray",
+      "colors": [
+        "Titan Gray"
+      ],
+      "storage": "512GB SSD",
+      "ram": "16GB DDR4",
+      "availableStorages": [
+        "16GB RAM / 512GB SSD"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/laptop-dell-5320.png"
+      ],
+      "specifications": {
+        "Display": "13.3-inch FHD (1920x1080) ComfortView Plus Non-Touch",
+        "Processor": "Intel Core i5-1145G7 11th Gen (vPro, up to 4.40 GHz)",
+        "Memory": "16GB LPDDR4x 3733 MHz",
+        "Storage": "512GB M.2 PCIe Gen 3 NVMe SSD",
+        "Operating System": "Windows 11 Pro 64-bit Genuine",
+        "Weight": "1.18 kg Magnesium Alloy Chassis",
+        "Warranty": "6 Months Sellbar Doorstep Warranty"
+      },
+      "description": "Sellbar Assured 11th Gen Latitude 5320: High speed processing, robust battery life, tested biometric login, and 6 months doorstep warranty.",
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 33,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "laptop-macbook-pro-m3",
+      "slug": "apple-macbook-pro-2023-a2991-m3-max-16-inch-refurbished",
+      "title": "Apple MacBook Pro 2023 A2991 (Apple M3 Max 16-inch)- Refurbished",
+      "categoryId": "cat-laptops",
+      "categoryName": "Laptops",
+      "brandId": "b-apple",
+      "brandName": "Apple",
+      "modelId": "dm-macm2",
+      "mrpPrice": 365399,
+      "sellbarPrice": 218499,
+      "stockCount": 2,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 99,
+      "color": "Space Black",
+      "colors": [
+        "Space Black",
+        "Silver"
+      ],
+      "storage": "1TB SSD",
+      "ram": "36GB Unified",
+      "availableStorages": [
+        "36GB Unified / 1TB SSD",
+        "48GB Unified / 1TB SSD"
+      ],
+      "warrantyMonths": 12,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/laptop-macbook-pro-m3.webp"
+      ],
+      "specifications": {
+        "Display": "16.2-inch Liquid Retina XDR (3456 x 2234) with ProMotion 120Hz",
+        "Processor": "Apple M3 Max (14-core CPU, 30-core GPU, 16-core Neural Engine)",
+        "Memory": "36GB Unified Memory",
+        "Storage": "1TB Superfast SSD",
+        "Ports": "SDXC card slot, HDMI port, 3.5mm headphone jack, MagSafe 3, 3x Thunderbolt 4",
+        "Audio": "Six-speaker sound system with force-cancelling woofers, Spatial Audio",
+        "Operating System": "macOS Sequoia with Apple Intelligence",
+        "Battery Health": "99% Original Capacity with 140W USB-C MagSafe Adapter",
+        "Warranty": "12 Months Comprehensive Sellbar Assured Warranty"
+      },
+      "description": "The ultimate professional machine: Liquid Retina XDR display, M3 Max extreme silicon power, 36GB unified memory, and 12-month Sellbar warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.6,
+      "reviewsCount": 14,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "laptop-dell-3410-i7",
+      "slug": "dell-latitude-3000-series-3410-intel-core-i7-refurbished",
+      "title": "Dell Latitude 3000 Series 3410 (Intel Core i7 10th Gen 14 Inch)- Refurbished",
+      "categoryId": "cat-laptops",
+      "categoryName": "Laptops",
+      "brandId": "b-dell",
+      "brandName": "Dell",
+      "modelId": "dm-dellxps",
+      "mrpPrice": 44999,
+      "sellbarPrice": 30199,
+      "stockCount": 4,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 88,
+      "color": "Dark Ash Gray",
+      "colors": [
+        "Dark Ash Gray"
+      ],
+      "storage": "512GB SSD",
+      "ram": "16GB DDR4",
+      "availableStorages": [
+        "16GB RAM / 512GB SSD"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/laptop-dell-3410-i7.png"
+      ],
+      "specifications": {
+        "Display": "14.0-inch FHD Anti-Glare LED Display",
+        "Processor": "Intel Core i7-10510U 10th Gen (4 Cores, 8 Threads up to 4.90 GHz)",
+        "Memory": "16GB DDR4 SO-DIMM",
+        "Storage": "512GB PCIe NVMe High-Speed SSD",
+        "Graphics": "Intel UHD Graphics with shared memory",
+        "Operating System": "Windows 11 Pro",
+        "Weight": "1.61 kg",
+        "Warranty": "6 Months Sellbar Doorstep Warranty"
+      },
+      "description": "High-speed Core i7 computing with generous 512GB NVMe storage and 16GB RAM for intense software development and business apps.",
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.3,
+      "reviewsCount": 18,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "laptop-dell-5310",
+      "slug": "dell-latitude-5000-series-5310-intel-core-i5-refurbished",
+      "title": "Dell Latitude 5000 Series 5310 (Intel Core i5 10th Gen 13.3 Inch)- Refurbished",
+      "categoryId": "cat-laptops",
+      "categoryName": "Laptops",
+      "brandId": "b-dell",
+      "brandName": "Dell",
+      "modelId": "dm-dellxps",
+      "mrpPrice": 42999,
+      "sellbarPrice": 29999,
+      "stockCount": 6,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 93,
+      "color": "Titan Gray",
+      "colors": [
+        "Titan Gray"
+      ],
+      "storage": "256GB SSD",
+      "ram": "16GB DDR4",
+      "availableStorages": [
+        "16GB RAM / 256GB SSD",
+        "16GB RAM / 512GB SSD"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/laptop-dell-5310.png"
+      ],
+      "specifications": {
+        "Display": "13.3-inch FHD WVA (1920 x 1080) Anti-Glare",
+        "Processor": "Intel Core i5-10310U vPro (4 Cores, up to 4.40 GHz)",
+        "Memory": "16GB DDR4 2666 MHz",
+        "Storage": "256GB M.2 PCIe NVMe Class 35 SSD",
+        "Operating System": "Windows 11 Pro",
+        "Battery": "4-cell 68Wh ExpressCharge Capable",
+        "Weight": "1.24 kg Ultraportable",
+        "Warranty": "6 Months Sellbar Comprehensive Warranty"
+      },
+      "description": "Sellbar Flawless Grade Dell Latitude 5310: Ultra-compact magnesium body with 16GB RAM and long battery life. 6 months warranty included.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 45,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "laptop-dell-3410-i5",
+      "slug": "dell-latitude-3000-series-3410-intel-core-i5-refurbished",
+      "title": "Dell Latitude 3000 Series 3410 (Intel Core i5 10th Gen 14 Inch)- Refurbished",
+      "categoryId": "cat-laptops",
+      "categoryName": "Laptops",
+      "brandId": "b-dell",
+      "brandName": "Dell",
+      "modelId": "dm-dellxps",
+      "mrpPrice": 39999,
+      "sellbarPrice": 24499,
+      "stockCount": 10,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 89,
+      "color": "Dark Ash Gray",
+      "colors": [
+        "Dark Ash Gray"
+      ],
+      "storage": "256GB SSD",
+      "ram": "8GB DDR4",
+      "availableStorages": [
+        "8GB RAM / 256GB SSD",
+        "16GB RAM / 512GB SSD"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/laptop-dell-3410-i5.png"
+      ],
+      "specifications": {
+        "Display": "14.0-inch HD/FHD Anti-Glare LED-Backlit",
+        "Processor": "Intel Core i5-10210U 10th Gen (4 Cores, 8 Threads up to 4.20 GHz)",
+        "Memory": "8GB DDR4 SO-DIMM",
+        "Storage": "256GB M.2 PCIe NVMe SSD",
+        "Graphics": "Intel UHD Graphics",
+        "Ports": "USB 3.2 Gen 1, Type-C, HDMI 1.4, RJ-45 Ethernet, SD Card Reader",
+        "Operating System": "Windows 11 Pro 64-bit",
+        "Weight": "1.61 kg",
+        "Warranty": "6 Months Sellbar Doorstep Warranty"
+      },
+      "description": "Sellbar Certified Dell Latitude 3410: Dependable laptop for office, programming, and college studies. Genuine adapter and clean OS included.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.6,
+      "reviewsCount": 28,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "laptop-lenovo-t14",
+      "slug": "lenovo-thinkpad-t-series-t14-gen-1-refurbished",
+      "title": "Lenovo Thinkpad T Series T14 GEN 1 (Amd Ryzen5 Pro 4000U Series 14 Inch)- Refurbished",
+      "categoryId": "cat-laptops",
+      "categoryName": "Laptops",
+      "brandId": "b-lenovo",
+      "brandName": "Lenovo",
+      "modelId": "dm-macm2",
+      "mrpPrice": 47849,
+      "sellbarPrice": 27299,
+      "stockCount": 7,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 90,
+      "color": "Matte Black",
+      "colors": [
+        "Matte Black"
+      ],
+      "storage": "256GB NVMe SSD",
+      "ram": "16GB DDR4",
+      "availableStorages": [
+        "16GB RAM / 256GB SSD",
+        "16GB RAM / 512GB SSD"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/laptop-lenovo-thinkpad.webp"
+      ],
+      "specifications": {
+        "Display": "14-inch Full HD Anti-Glare IPS (1920x1080)",
+        "Processor": "AMD Ryzen 5 PRO 4650U (6 Cores, 12 Threads up to 4.0 GHz)",
+        "Memory": "16GB DDR4 3200MHz",
+        "Storage": "256GB PCIe NVMe SSD",
+        "Graphics": "AMD Radeon Graphics",
+        "Operating System": "Windows 11 Pro 64-bit Genuine",
+        "Battery": "Integrated 50Wh with Rapid Charge support",
+        "Weight": "1.46 kg",
+        "Warranty": "6 Months Sellbar Comprehensive Warranty"
+      },
+      "description": "Sellbar Certified ThinkPad T14: Enterprise workhorse built to MIL-STD-810G military standards. Tested thermals, spill-resistant keyboard, 6 months warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.7,
+      "reviewsCount": 39,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "phone-iphone-13",
+      "slug": "sellbar-certified-apple-iphone-13-128gb-starlight",
+      "title": "Apple iPhone 13 (128GB) - Refurbished",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-apple",
+      "brandName": "Apple",
+      "modelId": "dm-ip13",
+      "mrpPrice": 59900,
+      "sellbarPrice": 32999,
+      "stockCount": 12,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 92,
+      "color": "Starlight",
+      "colors": [
+        "Starlight",
+        "Midnight",
+        "Blue",
+        "Pink"
+      ],
+      "storage": "128GB",
+      "ram": "4GB",
+      "availableStorages": [
+        "128GB",
+        "256GB"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "/products/iphone-13.webp"
+      ],
+      "specifications": {
+        "Display": "6.1-inch Super Retina XDR OLED",
+        "Processor": "A15 Bionic chip with 4-core GPU",
+        "Camera": "Dual 12MP System with Sensor-shift OIS & Cinematic Mode",
+        "Battery Health": "92% Certified Original Capacity",
+        "Water Resistance": "IP68 rated",
+        "OS": "iOS 18 Compatible"
+      },
+      "description": "Sellbar Like New Grade: Pristine display, reliable battery longevity, factory verified across 32 checkpoints with 6-month warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 104,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "phone-oneplus-nord2",
+      "slug": "oneplus-nord-2-5g-refurbished",
+      "title": "OnePlus Nord 2 5G - Refurbished",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-oneplus",
+      "brandName": "OnePlus",
+      "modelId": "dm-op12",
+      "mrpPrice": 33200,
+      "sellbarPrice": 16699,
+      "stockCount": 8,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 90,
+      "color": "Gray Sierra",
+      "colors": [
+        "Gray Sierra",
+        "Blue Haze"
+      ],
+      "storage": "128GB",
+      "ram": "8GB RAM",
+      "availableStorages": [
+        "8GB RAM / 128GB",
+        "12GB RAM / 256GB"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/phone-oneplus-nord2.jpg"
+      ],
+      "specifications": {
+        "Display": "6.43-inch Fluid AMOLED 90Hz HDR10+",
+        "Processor": "MediaTek Dimensity 1200 AI (6nm)",
+        "Camera": "50MP Sony IMX766 OIS Main Sensor + 8MP Ultra Wide",
+        "Charging": "65W Warp Charge 0 to 100% in 30 minutes",
+        "Battery": "4500 mAh Dual-Cell Battery"
+      },
+      "description": "Sellbar Assured OnePlus Nord 2: Flagship camera performance at a budget-friendly price. 6 months doorstep warranty included.",
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4,
+      "reviewsCount": 22,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "phone-samsung-flip6",
+      "slug": "samsung-galaxy-z-flip6-5g-refurbished",
+      "title": "Samsung Galaxy Z Flip6 5G - Refurbished",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "modelId": "dm-s24u",
+      "mrpPrice": 109999,
+      "sellbarPrice": 48899,
+      "stockCount": 5,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 99,
+      "color": "Silver Shadow",
+      "colors": [
+        "Silver Shadow",
+        "Mint",
+        "Blue",
+        "Yellow"
+      ],
+      "storage": "256GB",
+      "ram": "12GB RAM",
+      "availableStorages": [
+        "12GB RAM / 256GB",
+        "12GB RAM / 512GB"
+      ],
+      "warrantyMonths": 12,
+      "inspectionScore": 32,
+      "images": [
+        "https://s3ng.cashify.in/cashify/product/img/xxhdpi/49733b41-913f.jpg"
+      ],
+      "specifications": {
+        "Main Display": "6.7-inch FHD+ Dynamic AMOLED 2X 120Hz",
+        "Cover Screen": "3.4-inch Super AMOLED FlexWindow with Widgets",
+        "Processor": "Snapdragon 8 Gen 3 for Galaxy",
+        "Camera": "50MP Wide with OIS + 12MP Ultra-Wide",
+        "Battery": "4000 mAh Long-Life Battery",
+        "AI Features": "Galaxy AI Live Translate, Photo Assist & Generative Edit"
+      },
+      "description": "Sellbar Certified Flip6: Compact flagship with Galaxy AI and redesigned armor aluminum hinge. 12 months doorstep warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewsCount": 52,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "phone-samsung-fold5",
+      "slug": "samsung-galaxy-z-fold5-5g-refurbished",
+      "title": "Samsung Galaxy Z Fold5 - Refurbished",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "modelId": "dm-s24u",
+      "mrpPrice": 84399,
+      "sellbarPrice": 69499,
+      "stockCount": 3,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 98,
+      "color": "Icy Blue",
+      "colors": [
+        "Icy Blue",
+        "Phantom Black",
+        "Cream"
+      ],
+      "storage": "256GB",
+      "ram": "12GB RAM",
+      "availableStorages": [
+        "12GB RAM / 256GB",
+        "12GB RAM / 512GB"
+      ],
+      "warrantyMonths": 12,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/phone-samsung-fold5.jpg",
+        "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Main Display": "7.6-inch Foldable Dynamic AMOLED 2X 120Hz",
+        "Cover Display": "6.2-inch Dynamic AMOLED 2X 120Hz",
+        "Processor": "Snapdragon 8 Gen 2 for Galaxy",
+        "Rear Camera": "50MP Dual Pixel OIS + 10MP 3x Telephoto + 12MP Ultra Wide",
+        "Battery": "4400 mAh with 25W Fast Charge",
+        "Hinge": "Zero-gap Flex Hinge mechanism tested for 200,000+ folds"
+      },
+      "description": "Sellbar Flawless Grade: Zero scratches on foldable screen or hinge. Multi-active window productivity beast with 12 months comprehensive warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewsCount": 34,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "phone-samsung-s21",
+      "slug": "samsung-galaxy-s21-ultra-5g-refurbished",
+      "title": "Samsung Galaxy S21 Ultra 5G - Refurbished",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "modelId": "dm-s23",
+      "mrpPrice": 73600,
+      "sellbarPrice": 36699,
+      "stockCount": 4,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 92,
+      "color": "Phantom Black",
+      "colors": [
+        "Phantom Black",
+        "Phantom Silver"
+      ],
+      "storage": "128GB",
+      "ram": "12GB RAM",
+      "availableStorages": [
+        "12GB RAM / 128GB",
+        "12GB RAM / 256GB"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "/cashify/phone-samsung-s21.jpg",
+        "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Display": "6.8-inch Dynamic AMOLED 2X 120Hz WQHD+ (3200 x 1440)",
+        "Processor": "Exynos 2100 / Snapdragon 888 Octa-Core",
+        "Rear Camera": "108MP Main with OIS + 10MP 10x Periscope + 10MP 3x + 12MP Ultra Wide",
+        "Front Camera": "40MP High-Resolution Selfie Camera",
+        "Battery": "5000 mAh with 25W Fast Charging support",
+        "Network": "5G Dual SIM",
+        "OS": "One UI based on Android 14"
+      },
+      "description": "Sellbar Certified Samsung Galaxy S21 Ultra 5G: Inspected across 32 points. Phenomenal 100x Space Zoom camera, vibrant 120Hz display, and 6 months doorstep warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.5,
+      "reviewsCount": 48,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "prod-samsung-s25-refurbished",
+      "slug": "samsung-galaxy-s25-5g-refurbished",
+      "title": "Samsung Galaxy S25 5G - Refurbished",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "mrpPrice": 98899,
+      "sellbarPrice": 50899,
+      "stockCount": 5,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 100,
+      "color": "Onyx Black",
+      "colors": [
+        "Onyx Black",
+        "Marble Gray",
+        "Cobalt Violet"
+      ],
+      "storage": "256GB",
+      "ram": "12 GB RAM",
+      "availableStorages": [
+        "12 GB RAM / 256 GB",
+        "12 GB RAM / 512 GB"
+      ],
+      "warrantyMonths": 12,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Screen Size": "6.2 inches Dynamic AMOLED 2X 120Hz",
+        "Processor": "Snapdragon 8 Elite / Exynos 2500",
+        "Camera": "50MP Triple Camera System with Galaxy AI",
+        "Battery": "4000 mAh with 25W Fast Charging"
+      },
+      "description": "Sellbar Certified Samsung Galaxy S25 5G: Complete Galaxy AI suite, pristine display, 12 months doorstep warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 29,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "prod-oppo-findx8pro-refurbished",
+      "slug": "oppo-find-x8-pro-5g-refurbished",
+      "title": "OPPO Find X8 Pro 5G - Refurbished",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-oppo",
+      "brandName": "OPPO",
+      "mrpPrice": 121999,
+      "sellbarPrice": 52299,
+      "stockCount": 2,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 99,
+      "color": "Pearl White",
+      "colors": [
+        "Pearl White",
+        "Space Black"
+      ],
+      "storage": "512GB",
+      "ram": "16 GB RAM",
+      "availableStorages": [
+        "16 GB RAM / 512 GB"
+      ],
+      "warrantyMonths": 12,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Screen Size": "6.82 inches LTPO AMOLED Quad HD+",
+        "Processor": "Snapdragon 8 Gen 3 Flagship",
+        "Camera": "Hasselblad Quad 50MP Cameras with Dual Periscope",
+        "Battery": "5910 mAh Silicon-Carbon Battery with 80W Charging"
+      },
+      "description": "Sellbar Assured OPPO Flagship: Grade A+ pristine condition with Hasselblad camera optics.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 5,
+      "reviewsCount": 12,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "prod-oppo-reno16-refurbished",
+      "slug": "oppo-reno16-5g-refurbished",
+      "title": "OPPO Reno16 5G - Refurbished",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-oppo",
+      "brandName": "OPPO",
+      "mrpPrice": 71399,
+      "sellbarPrice": 54999,
+      "stockCount": 1,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 96,
+      "color": "Starlight Silver",
+      "colors": [
+        "Starlight Silver",
+        "Aurora Blue"
+      ],
+      "storage": "256GB",
+      "ram": "12 GB RAM",
+      "availableStorages": [
+        "12 GB RAM / 256 GB"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Screen Size": "6.7 inches AMOLED 120Hz",
+        "Processor": "MediaTek Dimensity 8350",
+        "Camera": "108MP OIS Main + 32MP Telephoto",
+        "Battery": "5100 mAh with 67W Fast Charging"
+      },
+      "description": "Sellbar Assured OPPO Reno16: Minimal scratches, tested battery health, 6-month warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 3.5,
+      "reviewsCount": 3,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
+    {
+      "id": "prod-oppo-reno15pro-171757",
+      "slug": "renewed-oppo-reno15-pro",
+      "title": "OPPO Reno15 Pro 5G - Refurbished",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-oppo",
+      "brandName": "OPPO",
+      "modelId": "dm-reno15pro",
+      "mrpPrice": 74999,
+      "sellbarPrice": 55599,
+      "stockCount": 6,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 100,
+      "color": "Cocoa Brown",
+      "colors": [
+        "Cocoa Brown",
+        "Sunset Gold",
+        "Starlight Black"
+      ],
+      "storage": "256GB",
+      "ram": "12 GB RAM",
+      "availableStorages": [
+        "12 GB RAM / 256 GB",
+        "12 GB RAM / 512 GB"
+      ],
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80"
+      ],
+      "model3dUrl": "/assets/3d/smartphone.glb",
+      "specifications": {
+        "Screen Size": "6.78 inches FHD+ AMOLED (1272 x 2772 pixels)",
+        "Refresh Rate": "120 Hz with Corning Gorilla Glass Victus",
+        "Peak Brightness": "1800 nits High Dynamic Range",
+        "Chipset": "MediaTek Dimensity 8450 (4 nm)",
+        "CPU": "Octa-core (3.25 GHz Cortex X925 + 3.3 GHz Cortex X4 + 2.4 GHz Cortex A720)",
+        "GPU": "Mali-G720 MC7",
+        "Rear Camera": "Triple: 200 MP (f/1.8, OIS) + 50 MP Ultra-Wide + 50 MP Telephoto",
+        "Front Camera": "50 MP (f/2.0) with 4K 60fps Video & Screen Flash",
+        "RAM Type": "12 GB LPDDR5X",
+        "Storage Type": "256 GB / 512 GB UFS 3.1",
+        "Battery": "5000 mAh with 80W SuperVOOC Flash Charging",
+        "Network": "5G Dual SIM (Nano-SIM, dual stand-by)",
+        "Operating System": "ColorOS based on Android 16 (5 yrs OS updates)",
+        "Weight": "205 grams"
+      },
+      "description": "Sellbar Assured OPPO Reno15 Pro 5G: Thoroughly inspected across 32 rigorous hardware & software checkpoints. Flawless display, pristine cameras, high battery endurance, and 6 months default doorstep warranty with optional 12 months extension.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4,
+      "reviewsCount": 1,
+      "createdAt": "2026-10-18T11:46:18.589Z"
+    },
     {
       "slug": "test-refurb-device-1792241958351",
       "title": "Samsung Galaxy S23 FE 5G (128GB) - Like New",
@@ -643,7 +1489,7 @@
       "modelId": "dm-ip15",
       "mrpPrice": 79900,
       "sellbarPrice": 56999,
-      "stockCount": 6,
+      "stockCount": 8,
       "conditionGrade": "FLAWLESS",
       "batteryHealth": 100,
       "color": "Pastel Blue",
@@ -655,6 +1501,7 @@
         "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
       ],
+      "model3dUrl": "/assets/3d/smartphone.glb",
       "specifications": {
         "Display": "6.1-inch Super Retina XDR OLED with Dynamic Island",
         "Processor": "A16 Bionic chip with 5-core GPU",
@@ -669,8 +1516,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 142,
-      "createdAt": "2026-10-17T05:18:35.848Z",
-      "model3dUrl": "/assets/3d/smartphone.glb",
+      "createdAt": "2026-10-18T11:46:18.589Z",
       "colors": [
         "Pastel Blue",
         "Silver Starlight",
@@ -702,9 +1548,7 @@
       "warrantyMonths": 6,
       "inspectionScore": 32,
       "images": [
-        "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?auto=format&fit=crop&w=800&q=80"
       ],
       "specifications": {
         "Display": "6.1-inch Super Retina XDR OLED",
@@ -719,7 +1563,7 @@
       "isActive": true,
       "rating": 4.8,
       "reviewsCount": 89,
-      "createdAt": "2026-10-17T05:18:35.849Z",
+      "createdAt": "2026-10-18T11:46:18.589Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Midnight Black",
@@ -752,9 +1596,7 @@
       "warrantyMonths": 12,
       "inspectionScore": 32,
       "images": [
-        "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80"
       ],
       "specifications": {
         "Display": "6.8-inch Dynamic AMOLED 2X 120Hz Gorilla Armor",
@@ -768,7 +1610,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 67,
-      "createdAt": "2026-10-17T05:18:35.849Z",
+      "createdAt": "2026-10-18T11:46:18.589Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Titanium Gray",
@@ -801,9 +1643,7 @@
       "warrantyMonths": 6,
       "inspectionScore": 32,
       "images": [
-        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80"
       ],
       "specifications": {
         "Display": "13.6-inch Liquid Retina Display (500 nits)",
@@ -818,7 +1658,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 114,
-      "createdAt": "2026-10-17T05:18:35.849Z",
+      "createdAt": "2026-10-18T11:46:18.589Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Starlight",
@@ -851,9 +1691,7 @@
       "warrantyMonths": 12,
       "inspectionScore": 32,
       "images": [
-        "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80"
       ],
       "specifications": {
         "Display": "6.82-inch 2K ProXDR Display 120Hz",
@@ -866,7 +1704,7 @@
       "isActive": true,
       "rating": 4.8,
       "reviewsCount": 43,
-      "createdAt": "2026-10-17T05:18:35.849Z",
+      "createdAt": "2026-10-18T11:46:18.589Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Silky Black",
@@ -899,9 +1737,7 @@
       "warrantyMonths": 6,
       "inspectionScore": 32,
       "images": [
-        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80"
       ],
       "specifications": {
         "Display": "13.4-inch FHD+ InfinityEdge Anti-Glare",
@@ -915,7 +1751,7 @@
       "isActive": true,
       "rating": 4.7,
       "reviewsCount": 31,
-      "createdAt": "2026-10-17T05:18:35.849Z",
+      "createdAt": "2026-10-18T11:46:18.589Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Platinum Silver",
@@ -948,9 +1784,7 @@
       "warrantyMonths": 12,
       "inspectionScore": 32,
       "images": [
-        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80"
       ],
       "specifications": {
         "Display": "11-inch Liquid Retina with True Tone & P3 wide color",
@@ -963,7 +1797,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 52,
-      "createdAt": "2026-10-17T05:18:35.849Z",
+      "createdAt": "2026-10-18T11:46:18.589Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Space Gray",
@@ -995,9 +1829,7 @@
       "warrantyMonths": 6,
       "inspectionScore": 32,
       "images": [
-        "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80"
       ],
       "specifications": {
         "Display": "Always-On Retina display up to 2000 nits",
@@ -1010,7 +1842,7 @@
       "isActive": true,
       "rating": 4.8,
       "reviewsCount": 78,
-      "createdAt": "2026-10-17T05:18:35.849Z",
+      "createdAt": "2026-10-18T11:46:18.589Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Midnight Aluminum",

@@ -14,6 +14,7 @@ export default function RefurbishedLaptopsSection() {
     {
       id: 'laptop-lenovo-t14',
       title: 'Lenovo Thinkpad T Series T14 GEN 1 (Amd Ryzen5 Pro 4000U Series 14 Inch)- Refurbished',
+      href: '/buy-refurbished-laptops/lenovo-thinkpad-t-series-t14-gen-1-refurbished',
       price: '₹27,299',
       mrp: '₹47,849',
       discountOff: '₹20,550 OFF',
@@ -25,6 +26,7 @@ export default function RefurbishedLaptopsSection() {
     {
       id: 'laptop-dell-3410-i5',
       title: 'Dell Latitude 3000 Series 3410 (Intel Core i5 10th Gen 14 Inch)- Refurbished',
+      href: '/buy-refurbished-laptops/dell-latitude-3000-series-3410-intel-core-i5-refurbished',
       price: '₹24,499',
       mrp: '₹39,999',
       discountOff: '₹15,500 OFF',
@@ -36,6 +38,7 @@ export default function RefurbishedLaptopsSection() {
     {
       id: 'laptop-dell-5310',
       title: 'Dell Latitude 5000 Series 5310 (Intel Core i5 10th Gen 13.3 Inch)- Refurbished',
+      href: '/buy-refurbished-laptops/dell-latitude-5000-series-5310-intel-core-i5-refurbished',
       price: '₹29,999',
       mrp: '₹42,999',
       discountOff: '₹13,000 OFF',
@@ -47,6 +50,7 @@ export default function RefurbishedLaptopsSection() {
     {
       id: 'laptop-dell-3410-i7',
       title: 'Dell Latitude 3000 Series 3410 (Intel Core i7 10th Gen 14 Inch)- Refurbished',
+      href: '/buy-refurbished-laptops/dell-latitude-3000-series-3410-intel-core-i7-refurbished',
       price: '₹30,199',
       mrp: '₹44,999',
       discountOff: '₹14,800 OFF',
@@ -58,6 +62,7 @@ export default function RefurbishedLaptopsSection() {
     {
       id: 'laptop-macbook-pro-m3',
       title: 'Apple MacBook Pro 2023 A2991 (Apple M3 Max 16-inch)- Refurbished',
+      href: '/buy-refurbished-laptops/apple-macbook-pro-2023-a2991-m3-max-16-inch-refurbished',
       price: '₹2,18,499',
       mrp: '₹3,65,399',
       discountOff: '₹1,46,900 OFF',
@@ -69,6 +74,7 @@ export default function RefurbishedLaptopsSection() {
     {
       id: 'laptop-dell-5320',
       title: 'Dell Latitude 5000 Series 5320 (Intel Core i5 11th Gen 13.3 Inch)- Refurbished',
+      href: '/buy-refurbished-laptops/dell-latitude-5000-series-5320-intel-core-i5-refurbished',
       price: '₹34,499',
       mrp: '₹55,000',
       discountOff: '₹20,501 OFF',
@@ -80,6 +86,7 @@ export default function RefurbishedLaptopsSection() {
     {
       id: 'laptop-macbook-air-m1',
       title: 'Apple MacBook Air 2020 (Apple M1 / 8GB / 256GB SSD)- Refurbished',
+      href: '/buy-refurbished-laptops/apple-macbook-air-2020-m1-8gb-256gb-refurbished',
       price: '₹46,999',
       mrp: '₹92,900',
       discountOff: '₹45,901 OFF',
@@ -91,6 +98,7 @@ export default function RefurbishedLaptopsSection() {
     {
       id: 'laptop-lenovo-x1-carbon',
       title: 'Lenovo ThinkPad X1 Carbon Gen 9 (Intel Core i7 11th Gen)- Refurbished',
+      href: '/buy-refurbished-laptops/lenovo-thinkpad-x1-carbon-gen-9-refurbished',
       price: '₹44,999',
       mrp: '₹89,999',
       discountOff: '₹45,000 OFF',
@@ -174,7 +182,7 @@ export default function RefurbishedLaptopsSection() {
           {laptops.map((laptop) => (
             <Link
               key={laptop.id}
-              href={`/buy-refurbished?id=${laptop.id}`}
+              href={laptop.href}
               className="w-48 sm:w-60 shrink-0 bg-white rounded-md border-2 border-gray-100 hover:border-gray-300 hover:shadow-md transition-all duration-200 flex flex-col justify-between p-3 relative cursor-pointer"
             >
               <div>

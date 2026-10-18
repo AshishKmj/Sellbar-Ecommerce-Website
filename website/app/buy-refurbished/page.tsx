@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 export const dynamic = 'force-dynamic';
 import {
@@ -15,6 +16,8 @@ import RefurbishedProductCard from '@/components/RefurbishedProductCard';
 
 export default async function BuyRefurbishedPage(props: {
   searchParams: Promise<{
+    id?: string;
+    slug?: string;
     category?: string;
     brand?: string;
     grade?: string;
@@ -24,6 +27,24 @@ export default async function BuyRefurbishedPage(props: {
   }>;
 }) {
   const searchParams = await props.searchParams;
+
+  // Gracefully redirect legacy query param links (?id=... or ?slug=...) to PDP
+  const targetIdOrSlug = searchParams.id || searchParams.slug;
+  if (targetIdOrSlug) {
+    const matchedProduct = db.getRefurbishedProductBySlug(targetIdOrSlug);
+    if (matchedProduct) {
+      if (matchedProduct.categoryId === 'cat-laptops') {
+        redirect(`/buy-refurbished-laptops/${matchedProduct.slug}`);
+      } else if (matchedProduct.categoryId === 'cat-phones') {
+        if (matchedProduct.slug.includes('reno15')) {
+          redirect(`/buy-refurbished-mobile-phones/${matchedProduct.slug}/sale/171757`);
+        }
+        redirect(`/buy-refurbished-mobile-phones/${matchedProduct.slug}`);
+      } else {
+        redirect(`/product/${matchedProduct.slug}`);
+      }
+    }
+  }
   const categories = db.getCategories();
   const brands = db.getBrands();
 

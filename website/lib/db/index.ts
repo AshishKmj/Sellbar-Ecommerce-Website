@@ -67,7 +67,42 @@ function ensureInitialized(): DatabaseState {
 
   try {
     const raw = fs.readFileSync(DB_FILE, 'utf-8');
-    return JSON.parse(raw);
+    const parsed: DatabaseState = JSON.parse(raw);
+    let changed = false;
+
+    // Sync any newly added seed refurbished products
+    for (const p of SEED_REFURBISHED_PRODUCTS) {
+      const idx = parsed.refurbishedProducts.findIndex((x) => x.id === p.id || x.slug === p.slug);
+      if (idx === -1) {
+        parsed.refurbishedProducts.unshift(p);
+        changed = true;
+      } else {
+        // update with latest seed specs, images, prices and slug
+        parsed.refurbishedProducts[idx] = { ...parsed.refurbishedProducts[idx], ...p };
+        changed = true;
+      }
+    }
+
+    // Sync any newly added seed brands
+    for (const b of SEED_BRANDS) {
+      if (!parsed.brands.some((x) => x.id === b.id || x.slug === b.slug)) {
+        parsed.brands.push(b);
+        changed = true;
+      }
+    }
+
+    // Sync any newly added device models
+    for (const m of SEED_DEVICE_MODELS) {
+      if (!parsed.deviceModels.some((x) => x.id === m.id || x.slug === m.slug)) {
+        parsed.deviceModels.push(m);
+        changed = true;
+      }
+    }
+
+    if (changed) {
+      saveState(parsed);
+    }
+    return parsed;
   } catch {
     // If parse fails, reset with initial
     return ensureInitialized();
@@ -193,9 +228,46 @@ export const db = {
 
     return result;
   },
-  getRefurbishedProductBySlug(slug: string): RefurbishedProduct | undefined {
+  getRefurbishedProductBySlug(rawSlug: string): RefurbishedProduct | undefined {
     const state = ensureInitialized();
-    return state.refurbishedProducts.find((p) => p.slug.toLowerCase() === slug.toLowerCase() && p.isActive);
+    const slug = (rawSlug || '').toLowerCase().trim();
+    if (!slug) return state.refurbishedProducts[0];
+    
+    // 1. Exact match on slug
+    const exactSlug = state.refurbishedProducts.find((p) => p.slug.toLowerCase() === slug && p.isActive);
+    if (exactSlug) return exactSlug;
+
+    // 2. Exact match on ID
+    const exactId = state.refurbishedProducts.find((p) => p.id && p.id.toLowerCase() === slug && p.isActive);
+    if (exactId) return exactId;
+
+    // 3. Normalize slug (strip leading/trailing slashes, /sale/xxx, etc.)
+    const cleanSlug = slug.replace(/\/sale\/.*$/, '').replace(/^\/+|\/+$/g, '');
+    const cleanMatch = state.refurbishedProducts.find((p) => p.slug.toLowerCase() === cleanSlug && p.isActive);
+    if (cleanMatch) return cleanMatch;
+
+    // 4. Match cleanSlug to ID
+    const cleanId = state.refurbishedProducts.find((p) => p.id && p.id.toLowerCase() === cleanSlug && p.isActive);
+    if (cleanId) return cleanId;
+
+    // 5. Special match for Reno 15 Pro Cashify reference
+    if (cleanSlug.includes('reno15') || cleanSlug.includes('171757')) {
+      const oppo = state.refurbishedProducts.find((p) => p.slug.includes('reno15') || p.id.includes('reno15'));
+      if (oppo) return oppo;
+    }
+
+    // 6. Match by slug includes or ID includes
+    const partialMatch = state.refurbishedProducts.find(
+      (p) =>
+        p.isActive &&
+        (cleanSlug.includes(p.slug.toLowerCase()) ||
+          p.slug.toLowerCase().includes(cleanSlug) ||
+          (p.id && (cleanSlug.includes(p.id.toLowerCase()) || p.id.toLowerCase().includes(cleanSlug))))
+    );
+    if (partialMatch) return partialMatch;
+
+    // 7. Fallback to first featured product
+    return state.refurbishedProducts.find((p) => p.isFeatured && p.isActive) || state.refurbishedProducts[0];
   },
   createRefurbishedProduct(product: Omit<RefurbishedProduct, 'id' | 'createdAt'>): RefurbishedProduct {
     const state = ensureInitialized();

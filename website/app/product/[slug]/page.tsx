@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { db } from '@/lib/db';
 import ProductDetailClient from '@/components/ProductDetailClient';
+import CashifyStylePDP from '@/components/CashifyStylePDP';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -42,5 +43,5 @@ export default async function ProductDetailPage({ params }: Props) {
     .filter((p) => p.id !== product.id)
     .slice(0, 4);
 
-  return <ProductDetailClient product={product} related={related} />;
+  return <CashifyStylePDP product={product} related={related} />;
 }
