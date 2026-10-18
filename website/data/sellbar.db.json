@@ -518,7 +518,7 @@
       "isActive": true,
       "rating": 4.7,
       "reviewsCount": 31,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.509Z"
     },
     {
       "id": "laptop-macbook-air-m1",
@@ -567,7 +567,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 168,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.508Z"
     },
     {
       "id": "laptop-dell-5320",
@@ -611,7 +611,7 @@
       "isActive": true,
       "rating": 4.8,
       "reviewsCount": 33,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.508Z"
     },
     {
       "id": "laptop-macbook-pro-m3",
@@ -659,7 +659,7 @@
       "isActive": true,
       "rating": 4.6,
       "reviewsCount": 14,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.508Z"
     },
     {
       "id": "laptop-dell-3410-i7",
@@ -704,7 +704,7 @@
       "isActive": true,
       "rating": 4.3,
       "reviewsCount": 18,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.507Z"
     },
     {
       "id": "laptop-dell-5310",
@@ -750,7 +750,7 @@
       "isActive": true,
       "rating": 4.8,
       "reviewsCount": 45,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.507Z"
     },
     {
       "id": "laptop-dell-3410-i5",
@@ -797,7 +797,7 @@
       "isActive": true,
       "rating": 4.6,
       "reviewsCount": 28,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.507Z"
     },
     {
       "id": "laptop-lenovo-t14",
@@ -844,7 +844,7 @@
       "isActive": true,
       "rating": 4.7,
       "reviewsCount": 39,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.507Z"
     },
     {
       "id": "phone-iphone-13",
@@ -891,7 +891,7 @@
       "isActive": true,
       "rating": 4.8,
       "reviewsCount": 104,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.507Z"
     },
     {
       "id": "phone-oneplus-nord2",
@@ -935,7 +935,7 @@
       "isActive": true,
       "rating": 4,
       "reviewsCount": 22,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.507Z"
     },
     {
       "id": "phone-samsung-flip6",
@@ -982,7 +982,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 52,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.507Z"
     },
     {
       "id": "phone-samsung-fold5",
@@ -1029,7 +1029,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 34,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.505Z"
     },
     {
       "id": "phone-samsung-s21",
@@ -1076,7 +1076,7 @@
       "isActive": true,
       "rating": 4.5,
       "reviewsCount": 48,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.505Z"
     },
     {
       "id": "prod-samsung-s25-refurbished",
@@ -1119,7 +1119,7 @@
       "isActive": true,
       "rating": 4.8,
       "reviewsCount": 29,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.502Z"
     },
     {
       "id": "prod-oppo-findx8pro-refurbished",
@@ -1160,7 +1160,7 @@
       "isActive": true,
       "rating": 5,
       "reviewsCount": 12,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.502Z"
     },
     {
       "id": "prod-oppo-reno16-refurbished",
@@ -1201,7 +1201,7 @@
       "isActive": true,
       "rating": 3.5,
       "reviewsCount": 3,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.502Z"
     },
     {
       "id": "prod-oppo-reno15pro-171757",
@@ -1259,7 +1259,7 @@
       "isActive": true,
       "rating": 4,
       "reviewsCount": 1,
-      "createdAt": "2026-10-18T11:46:18.589Z"
+      "createdAt": "2026-10-18T12:13:07.500Z"
     },
     {
       "slug": "test-refurb-device-1792241958351",
@@ -1516,7 +1516,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 142,
-      "createdAt": "2026-10-18T11:46:18.589Z",
+      "createdAt": "2026-10-18T12:13:07.503Z",
       "colors": [
         "Pastel Blue",
         "Silver Starlight",
@@ -1563,7 +1563,7 @@
       "isActive": true,
       "rating": 4.8,
       "reviewsCount": 89,
-      "createdAt": "2026-10-18T11:46:18.589Z",
+      "createdAt": "2026-10-18T12:13:07.504Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Midnight Black",
@@ -1610,7 +1610,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 67,
-      "createdAt": "2026-10-18T11:46:18.589Z",
+      "createdAt": "2026-10-18T12:13:07.504Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Titanium Gray",
@@ -1658,7 +1658,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 114,
-      "createdAt": "2026-10-18T11:46:18.589Z",
+      "createdAt": "2026-10-18T12:13:07.504Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Starlight",
@@ -1704,7 +1704,7 @@
       "isActive": true,
       "rating": 4.8,
       "reviewsCount": 43,
-      "createdAt": "2026-10-18T11:46:18.589Z",
+      "createdAt": "2026-10-18T12:13:07.505Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Silky Black",
@@ -1751,7 +1751,7 @@
       "isActive": true,
       "rating": 4.7,
       "reviewsCount": 31,
-      "createdAt": "2026-10-18T11:46:18.589Z",
+      "createdAt": "2026-10-18T12:13:07.505Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Platinum Silver",
@@ -1797,7 +1797,7 @@
       "isActive": true,
       "rating": 4.9,
       "reviewsCount": 52,
-      "createdAt": "2026-10-18T11:46:18.589Z",
+      "createdAt": "2026-10-18T12:13:07.505Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Space Gray",
@@ -1842,7 +1842,7 @@
       "isActive": true,
       "rating": 4.8,
       "reviewsCount": 78,
-      "createdAt": "2026-10-18T11:46:18.589Z",
+      "createdAt": "2026-10-18T12:13:07.505Z",
       "model3dUrl": "/assets/3d/smartphone.glb",
       "colors": [
         "Midnight Aluminum",

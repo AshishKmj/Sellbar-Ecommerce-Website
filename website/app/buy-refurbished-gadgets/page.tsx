@@ -33,6 +33,7 @@ interface RefurbItem {
   name: string;
   brand: string;
   category: string;
+  href: string;
   originalPrice: number;
   salePrice: number;
   discount: number;
@@ -51,6 +52,7 @@ const FEATURED_DEALS: RefurbItem[] = [
     name: 'Apple iPhone 14 (128 GB) - Midnight',
     brand: 'Apple',
     category: 'phones',
+    href: '/buy-refurbished-mobile-phones/sellbar-certified-apple-iphone-14-128gb-midnight-like-new',
     originalPrice: 69900,
     salePrice: 38999,
     discount: 44,
@@ -67,6 +69,7 @@ const FEATURED_DEALS: RefurbItem[] = [
     name: 'Samsung Galaxy S24 5G (8GB/256GB)',
     brand: 'Samsung',
     category: 'phones',
+    href: '/buy-refurbished-mobile-phones/sellbar-certified-samsung-s24-ultra-512gb-titanium-gray-flawless',
     originalPrice: 79999,
     salePrice: 48499,
     discount: 39,
@@ -83,6 +86,7 @@ const FEATURED_DEALS: RefurbItem[] = [
     name: 'Apple iPhone 13 (128 GB) - Starlight',
     brand: 'Apple',
     category: 'phones',
+    href: '/buy-refurbished-mobile-phones/sellbar-certified-apple-iphone-13-128gb-starlight',
     originalPrice: 59900,
     salePrice: 32999,
     discount: 45,
@@ -99,6 +103,7 @@ const FEATURED_DEALS: RefurbItem[] = [
     name: 'OnePlus 12 5G (16GB/512GB) - Silky Black',
     brand: 'OnePlus',
     category: 'phones',
+    href: '/buy-refurbished-mobile-phones/sellbar-certified-oneplus-12-16gb-512gb-silky-black',
     originalPrice: 69999,
     salePrice: 44999,
     discount: 36,
@@ -114,6 +119,7 @@ const FEATURED_DEALS: RefurbItem[] = [
     name: 'Samsung Galaxy Z Fold 5 5G (512GB)',
     brand: 'Samsung',
     category: 'phones',
+    href: '/buy-refurbished-mobile-phones/samsung-galaxy-z-fold5-5g-refurbished',
     originalPrice: 164999,
     salePrice: 79999,
     discount: 52,
@@ -127,41 +133,44 @@ const FEATURED_DEALS: RefurbItem[] = [
   },
   {
     id: 'rf-macbook-m3',
-    name: 'Apple MacBook Pro 14" M3 (512GB SSD)',
+    name: 'Apple MacBook Pro 2023 A2991 M3 Max (1TB SSD)',
     brand: 'Apple',
     category: 'laptops',
-    originalPrice: 169900,
-    salePrice: 114999,
-    discount: 32,
+    href: '/buy-refurbished-laptops/apple-macbook-pro-2023-a2991-m3-max-16-inch-refurbished',
+    originalPrice: 365399,
+    salePrice: 218499,
+    discount: 40,
     grade: 'Flawless',
     warranty: '12 Months Warranty',
     rating: 4.9,
     reviewsCount: 76,
     image: '/cashify/laptop-macbook-pro-m3.webp',
     tag: 'Pro Tech',
-    specs: ['Apple M3 Pro Chip', 'Liquid Retina XDR', '22-Hour Battery Life'],
+    specs: ['Apple M3 Max Chip', 'Liquid Retina XDR', '22-Hour Battery Life'],
   },
   {
     id: 'rf-dell-5320',
-    name: 'Dell Latitude 5320 Core i7 11th Gen (16GB/512GB)',
+    name: 'Dell Latitude 5320 Core i5 11th Gen (16GB/512GB)',
     brand: 'Dell',
     category: 'laptops',
-    originalPrice: 89999,
-    salePrice: 28499,
-    discount: 68,
+    href: '/buy-refurbished-laptops/dell-latitude-5000-series-5320-intel-core-i5-refurbished',
+    originalPrice: 55000,
+    salePrice: 34499,
+    discount: 37,
     grade: 'Superb',
     warranty: '6 Months Warranty',
     rating: 4.7,
     reviewsCount: 119,
     image: '/cashify/laptop-dell-5320.png',
-    tag: '⚡ 68% Off',
-    specs: ['Intel Core i7 Quad-Core', 'FHD Touch Anti-Glare', 'Backlit Keyboard'],
+    tag: '⚡ 37% Off',
+    specs: ['Intel Core i5 Quad-Core', 'FHD Touch Anti-Glare', 'Backlit Keyboard'],
   },
   {
     id: 'rf-pixel7',
     name: 'Google Pixel 7 5G (128GB) - Obsidian',
     brand: 'Google',
     category: 'phones',
+    href: '/buy-refurbished-mobile-phones/samsung-galaxy-s21-ultra-5g-refurbished',
     originalPrice: 59999,
     salePrice: 26999,
     discount: 55,
@@ -169,7 +178,7 @@ const FEATURED_DEALS: RefurbItem[] = [
     warranty: '12 Months Warranty',
     rating: 4.6,
     reviewsCount: 210,
-    image: '/products/google-pixel-7.webp',
+    image: '/cashify/phone-samsung-s21.jpg',
     specs: ['Google Tensor G2', 'Real Tone 50MP Camera', 'Clean Stock Android'],
   },
 ];
@@ -178,7 +187,7 @@ const CATEGORIES = [
   {
     title: 'Refurbished Phones',
     sub: 'iPhones, Galaxy, OnePlus',
-    href: '/buy-refurbished?category=phones',
+    href: '/buy-refurbished-mobile-phones',
     image: '/services/buy-phone.webp',
     discount: 'Up to 70% Off',
     badge: '120+ Models',
@@ -186,7 +195,7 @@ const CATEGORIES = [
   {
     title: 'Refurbished Laptops',
     sub: 'MacBooks, ThinkPad, Dell',
-    href: '/buy-refurbished?category=laptops',
+    href: '/buy-refurbished-laptops',
     image: '/services/buy-laptops.webp',
     discount: 'Starting ₹16,999',
     badge: '60+ Models',
@@ -194,7 +203,7 @@ const CATEGORIES = [
   {
     title: 'Refurbished Smartwatches',
     sub: 'Apple Watch, Galaxy Watch',
-    href: '/buy-refurbished?category=smartwatches',
+    href: '/buy-refurbished-smart-watches',
     image: '/services/buy-smartwatches.webp',
     discount: 'Up to 65% Off',
     badge: '40+ Models',
@@ -202,7 +211,7 @@ const CATEGORIES = [
   {
     title: 'Refurbished Tablets',
     sub: 'iPad Pro, Galaxy Tabs',
-    href: '/buy-refurbished?category=tablets',
+    href: '/buy-refurbished-tablets',
     image: '/services/buy-tablets.webp',
     discount: 'Starting ₹11,999',
     badge: '35+ Models',
@@ -210,7 +219,7 @@ const CATEGORIES = [
   {
     title: 'Gaming Consoles',
     sub: 'PS5, PS4 Pro, Xbox Series X',
-    href: '/buy-refurbished?category=gaming',
+    href: '/buy-refurbished-gaming-consoles',
     image: '/services/buy-gaming.webp',
     discount: 'Up to 45% Off',
     badge: '20+ Models',
@@ -218,7 +227,7 @@ const CATEGORIES = [
   {
     title: 'DSLR & Mirrorless',
     sub: 'Sony Alpha, Canon, Nikon',
-    href: '/buy-refurbished?category=cameras',
+    href: '/buy-refurbished-dslr-cameras',
     image: '/services/buy-cameras.webp',
     discount: 'Tested Optics',
     badge: '15+ Models',
@@ -446,7 +455,7 @@ export default function BuyRefurbishedGadgetsPage() {
                   </div>
 
                   {/* Device Image Container */}
-                  <Link href={`/buy-refurbished?id=${product.id}`} className="px-6 py-4 block">
+                  <Link href={product.href || `/buy-refurbished?id=${product.id}`} className="px-6 py-4 block">
                     <div className="relative w-full h-44 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
                       <Image
                         src={product.image}
@@ -482,7 +491,7 @@ export default function BuyRefurbishedGadgetsPage() {
                       </div>
 
                       <h3 className="font-bold text-sm text-slate-900 line-clamp-2 leading-snug group-hover:text-[#13b59b] transition">
-                        <Link href={`/buy-refurbished?id=${product.id}`}>{product.name}</Link>
+                        <Link href={product.href || `/buy-refurbished?id=${product.id}`}>{product.name}</Link>
                       </h3>
 
                       {/* Specs pills */}
@@ -517,7 +526,7 @@ export default function BuyRefurbishedGadgetsPage() {
                       </p>
 
                       <Link
-                        href={`/buy-refurbished?id=${product.id}`}
+                        href={product.href || `/buy-refurbished?id=${product.id}`}
                         className="mt-3 w-full bg-[#13b59b] hover:bg-[#0f957f] text-white text-xs font-bold py-2 rounded-xl flex items-center justify-center gap-1 transition shadow-sm"
                       >
                         Buy Certified <ArrowRight className="w-3.5 h-3.5" />
