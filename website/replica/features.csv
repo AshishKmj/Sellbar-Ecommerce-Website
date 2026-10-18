@@ -1,0 +1,34 @@
+feature,area,priority,original_cashify_url,clone_sellbar_route,clone_status,notes
+About Us,Company,must,https://www.cashify.in/about-us,/about-us,yes,Full circular re-commerce vision pillars stats and 2020-2026 milestones
+Careers,Company,should,https://www.cashify.in/career,/career,yes,7 progressive benefits open engineering ops jobs culture
+Articles / Tech Hub,Company,should,https://www.cashify.in/articles,/articles,yes,Tech guides device reviews and resale news
+Press Releases,Company,should,https://www.cashify.in/press-releases,/press-releases,yes,ReUse drives 1500+ city milestone media kit contact desk
+Partner With Us,Company,must,https://www.cashify.in/partner-with-us,/partner-with-us,yes,10X profits 4 advantages 4-step fulfillment partner testimonials
+Become Supersale Partner,Company,should,https://supersale.cashify.in/lp/home/index.html,/supersale,yes,B2B wholesale portal 60+ brands 1200+ models GST onboarding
+Corporate Information,Company,should,https://www.cashify.in/corporate-information,/corporate-information,yes,Cashify split-screen brand & compliance layout MGT-7 Annual Returns
+FAQ Buyback & Refurbished,Help & Support,must,https://www.cashify.in/faq/category/buyback,/faq/category/buyback,yes,Interactive search category filters and expandable accordions
+Contact Us,Help & Support,must,https://www.cashify.in/contact,/contact,yes,Toll free phone multi-channel email HQ address ticket form
+Warranty Policy,Help & Support,must,https://www.cashify.in/warranty-policy,/warranty-policy,yes,Refurbished 12-month coverage vs 6+1 month repair screen warranty
+Refund Policy,Help & Support,must,https://www.cashify.in/refund-policy,/refund-policy,yes,7-day replacement guarantee repair refund terms payment timelines
+Terms & Conditions,More Info,must,https://www.cashify.in/terms-conditions,/terms-conditions,yes,Device ownership declaration physical inspection discrepancy terms
+Privacy Policy,More Info,must,https://www.cashify.in/privacy-policy,/privacy-policy,yes,DPDP Act 2023 compliance NIST 800-88 cryptographic data wiping
+Terms of Use,More Info,must,https://www.cashify.in/terms-of-use,/terms-of-use,yes,Platform eligibility lawful ownership warranty IT Act jurisdiction
+E-Waste Policy,More Info,must,https://www.cashify.in/e-waste-policy,/e-waste-policy,yes,CPCB EPR compliance Do and Donts Corporate Bulk and RWA collection
+Cookie Policy,More Info,should,https://www.cashify.in/cookie-policy,/cookie-policy,yes,Strictly necessary functionality analytics cookies browser guide
+What is Refurbished,More Info,must,https://www.cashify.in/buy-refurbished-mobile-phones/what-is-refurbished-mobile-phones,/buy-refurbished-mobile-phones/what-is-refurbished-mobile-phones,yes,Complete guide Flawless Superb Good cosmetic grades 32-point checks
+Sellbar Comedy Universe,More Info,could,https://www.cashify.in/lp/ccu,/lp/ccu,yes,Dark comedy video show player Lie Hard Relationshit Advice Aunty Kisko Bola
+Sell Phone Category,Services & Sell,must,https://www.cashify.in/sell-old-mobile-phone,/sell-old-mobile-phone,yes,Full buyback questionnaire and instant valuation
+Sell Laptop Category,Services & Sell,must,https://www.cashify.in/sell-old-laptop,/sell-old-laptop,yes,Laptop valuation model selector
+Sell Tablet Category,Services & Sell,must,https://www.cashify.in/sell-old-tablet,/sell-old-tablet,yes,iPad and Android tablet buyback flow
+Sell iMac Category,Services & Sell,should,https://www.cashify.in/sell-old-imac,/sell-old-imac,yes,Apple desktop and iMac resale calculator
+Sell Gaming Console Category,Services & Sell,should,https://www.cashify.in/sell-old-gaming-consoles,/sell-old-gaming-consoles,yes,PlayStation Xbox Nintendo resale
+Sell Television Category,Services & Sell,should,https://www.cashify.in/sell-old-television,/sell-old-television,yes,Smart LED TV doorstep valuation
+Sell Smart Watch Category,Services & Sell,must,https://www.cashify.in/sell-old-smart-watch,/sell-old-smart-watch,yes,Apple Watch Galaxy Watch resale
+Sell Smart Speaker Category,Services & Sell,should,https://www.cashify.in/sell-old-smart-speaker,/sell-old-smart-speaker,yes,Amazon Echo Google Nest valuation
+Sell DSLR Camera Category,Services & Sell,should,https://www.cashify.in/sell-old-dslr-camera,/sell-old-dslr-camera,yes,Canon Nikon Sony DSLR buyback
+Sell Earbuds Category,Services & Sell,should,https://www.cashify.in/sell-old-earbuds,/sell-old-earbuds,yes,AirPods Galaxy Buds resale
+Doorstep Repair,Services,must,https://www.cashify.in/repair,/repair,yes,Instant repair pricing screen battery diagnostics
+Buy Refurbished Gadgets,Services,must,https://www.cashify.in/buy-refurbished-gadgets,/buy-refurbished-gadgets,yes,Certified catalog filter sorting cart checkout
+Recycle Old Mobile Phone,Services,must,https://www.cashify.in/recycle-old-mobile-phone,/recycle-old-mobile-phone,yes,Green recycling zero e-waste disposal certificate
+Find New Phone,Services,should,https://www.cashify.in/find-new-phone,/find-new-phone,yes,Upcoming phones price comparison specifications
+Master Sell Portal,Services & Sell,must,https://www.cashify.in/sell,/sell,yes,Master buyback portal with all 10 device categories

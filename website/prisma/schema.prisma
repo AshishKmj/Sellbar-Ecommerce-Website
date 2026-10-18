@@ -1,0 +1,370 @@
+// Sellbar.in - PostgreSQL Schema
+// Production-ready Indian Electronics Resale & Refurbished Marketplace
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  CUSTOMER
+  TECHNICIAN
+  ADMIN
+  CATALOG_MANAGER
+  SUPPORT_STAFF
+}
+
+enum DeviceCategoryType {
+  SMARTPHONE
+  LAPTOP
+  TABLET
+  SMARTWATCH
+  DESKTOP
+  GAMING_CONSOLE
+  AUDIO_ACCESSORY
+}
+
+enum ConditionGrade {
+  FLAWLESS   // Grade A+: Like new, zero scratches, 100% battery, 12 mo warranty
+  LIKE_NEW   // Grade A: Minor micro-scratches, 85%+ battery, 6 mo warranty
+  SMART_VALUE // Grade B: Visible signs of wear, fully functional, 6 mo warranty
+}
+
+enum BuybackStatus {
+  DRAFT
+  QUOTE_GENERATED
+  AWAITING_CONFIRMATION
+  PICKUP_SCHEDULED
+  TECHNICIAN_ASSIGNED
+  PICKUP_OUT_FOR_COLLECTION
+  DEVICE_COLLECTED
+  INSPECTION_PENDING
+  INSPECTION_IN_PROGRESS
+  REVISED_OFFER_AVAILABLE
+  AWAITING_REVISED_OFFER_DECISION
+  ACCEPTED
+  REJECTED
+  PAYMENT_PENDING
+  PAYMENT_PROCESSING
+  PAID
+  CANCELLED
+  COMPLETED
+}
+
+enum OrderStatus {
+  PENDING_PAYMENT
+  PAYMENT_VERIFIED
+  PROCESSING
+  PACKED
+  SHIPPED
+  OUT_FOR_DELIVERY
+  DELIVERED
+  CANCELLED
+  RETURN_REQUESTED
+  RETURNED
+  REFUNDED
+}
+
+enum PaymentMethod {
+  RAZORPAY
+  UPI_DIRECT
+  NET_BANKING
+  CREDIT_DEBIT_CARD
+  CASH_ON_DELIVERY
+  SELLBAR_WALLET
+}
+
+enum PayoutMethod {
+  UPI_VPA
+  IMPS_BANK_TRANSFER
+  SELLBAR_WALLET_CREDIT
+  AMAZON_PAY_GIFT_CARD
+}
+
+enum ServiceStatus {
+  BOOKED
+  TECHNICIAN_ASSIGNED
+  IN_PROGRESS
+  REPAIRED
+  DELIVERED
+  CANCELLED
+}
+
+model User {
+  id            String          @id @default(uuid())
+  name          String
+  phone         String          @unique
+  email         String?         @unique
+  passwordHash  String?
+  role          Role            @default(CUSTOMER)
+  walletBalance Decimal         @default(0.00) @db.Decimal(10, 2)
+  upiVpa        String?
+  bankAccount   String?
+  bankIfsc      String?
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  addresses     UserAddress[]
+  buybackOrders BuybackOrder[]
+  orders        CustomerOrder[]
+  serviceBookings ServiceBooking[]
+  reviews       ProductReview[]
+  auditLogs     AuditLog[]
+}
+
+model UserAddress {
+  id           String   @id @default(uuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fullName     String
+  phone        String
+  streetAddress String
+  landmark     String?
+  city         String
+  state        String
+  pincode      String
+  isDefault    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+}
+
+model Category {
+  id          String             @id @default(uuid())
+  slug        String             @unique
+  name        String
+  description String?
+  type        DeviceCategoryType
+  icon        String?
+  imageUrl    String?
+  isActive    Boolean            @default(true)
+  createdAt   DateTime           @default(now())
+
+  brands      Brand[]
+  deviceModels DeviceModel[]
+  products    RefurbishedProduct[]
+}
+
+model Brand {
+  id          String        @id @default(uuid())
+  slug        String        @unique
+  name        String
+  logoUrl     String?
+  categoryId  String
+  category    Category      @relation(fields: [categoryId], references: [id])
+  deviceModels DeviceModel[]
+  products    RefurbishedProduct[]
+}
+
+model DeviceModel {
+  id              String               @id @default(uuid())
+  slug            String               @unique
+  name            String
+  categoryId      String
+  category        Category             @relation(fields: [categoryId], references: [id])
+  brandId         String
+  brand           Brand                @relation(fields: [brandId], references: [id])
+  baseResalePrice Decimal              @db.Decimal(10, 2)
+  imageUrl        String
+  popular         Boolean              @default(false)
+  releaseYear     Int?
+  variants        DeviceVariant[]
+  pricingRules    PricingRule[]
+  buybackOrders   BuybackOrder[]
+  refurbishedItems RefurbishedProduct[]
+}
+
+model DeviceVariant {
+  id            String         @id @default(uuid())
+  modelId       String
+  model         DeviceModel    @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  title         String         // e.g. "128GB / 6GB RAM"
+  ram           String?
+  storage       String?
+  priceOffset   Decimal        @default(0.00) @db.Decimal(10, 2)
+  buybackOrders BuybackOrder[]
+}
+
+model PricingRule {
+  id          String      @id @default(uuid())
+  modelId     String?
+  model       DeviceModel? @relation(fields: [modelId], references: [id])
+  ruleKey     String      // e.g. "SCREEN_CRACKED", "BATTERY_HEALTH_BELOW_80", "NO_BOX"
+  description String
+  percentageDeduction Decimal @default(0.00) @db.Decimal(5, 2)
+  fixedDeduction      Decimal @default(0.00) @db.Decimal(10, 2)
+  createdAt   DateTime    @default(now())
+}
+
+model BuybackOrder {
+  id              String         @id @default(uuid())
+  orderNumber     String         @unique // e.g. "SB-BUY-2026-1042"
+  userId          String
+  user            User           @relation(fields: [userId], references: [id])
+  modelId         String
+  model           DeviceModel    @relation(fields: [modelId], references: [id])
+  variantId       String
+  variant         DeviceVariant  @relation(fields: [variantId], references: [id])
+  
+  // Diagnostic responses
+  powersOn        Boolean        @default(true)
+  screenCondition String         // FLAWLESS, MINOR_SCRATCHES, CRACKED, TOUCH_ISSUE
+  bodyCondition   String         // FLAWLESS, SCRATCHES, DENTS, BENT
+  functionalDefects String[]     // FRONT_CAMERA, REAR_CAMERA, BIOMETRICS, BATTERY_DEGRADED, SPEAKER, PORTS
+  accessories     String[]       // ORIGINAL_BOX, ORIGINAL_CHARGER, VALID_BILL
+  
+  // Financial valuation
+  basePrice       Decimal        @db.Decimal(10, 2)
+  deductions      Decimal        @db.Decimal(10, 2)
+  promotionalBonus Decimal       @default(0.00) @db.Decimal(10, 2)
+  quotedPrice     Decimal        @db.Decimal(10, 2)
+  revisedPrice    Decimal?       @db.Decimal(10, 2)
+  finalPayoutPrice Decimal?      @db.Decimal(10, 2)
+  
+  status          BuybackStatus  @default(QUOTE_GENERATED)
+  payoutMethod    PayoutMethod   @default(UPI_VPA)
+  payoutDetails   String         // UPI ID or Account Number
+  
+  // Doorstep Pickup
+  pickupAddress   String
+  pickupPincode   String
+  pickupCity      String
+  pickupState     String
+  pickupDate      DateTime
+  pickupTimeSlot  String         // "09:00 AM - 01:00 PM", "01:00 PM - 05:00 PM", "05:00 PM - 08:00 PM"
+  assignedTechnicianName String?
+  assignedTechnicianPhone String?
+  technicianNotes String?
+  
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+}
+
+model RefurbishedProduct {
+  id              String         @id @default(uuid())
+  slug            String         @unique
+  title           String
+  categoryId      String
+  category        Category       @relation(fields: [categoryId], references: [id])
+  brandId         String
+  brand           Brand          @relation(fields: [brandId], references: [id])
+  modelId         String?
+  model           DeviceModel?   @relation(fields: [modelId], references: [id])
+  
+  mrpPrice        Decimal        @db.Decimal(10, 2) // Original MRP
+  sellbarPrice    Decimal        @db.Decimal(10, 2) // Refurbished price
+  stockCount      Int            @default(1)
+  conditionGrade  ConditionGrade @default(FLAWLESS)
+  batteryHealth   Int            @default(95)
+  color           String
+  storage         String
+  ram             String?
+  warrantyMonths  Int            @default(12)
+  inspectionScore Int            @default(32) // 32 of 32 points passed
+  images          String[]
+  specifications  Json
+  description     String
+  isFeatured      Boolean        @default(false)
+  isActive        Boolean        @default(true)
+  
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  
+  orderItems      OrderItem[]
+  reviews         ProductReview[]
+}
+
+model CustomerOrder {
+  id              String         @id @default(uuid())
+  orderNumber     String         @unique // e.g. "SB-ORD-2026-9821"
+  userId          String
+  user            User           @relation(fields: [userId], references: [id])
+  
+  status          OrderStatus    @default(PENDING_PAYMENT)
+  paymentMethod   PaymentMethod  @default(RAZORPAY)
+  paymentId       String?        // Gateway reference
+  paymentStatus   String         @default("PENDING") // PENDING, CAPTURED, FAILED
+  
+  subtotal        Decimal        @db.Decimal(10, 2)
+  discountAmount  Decimal        @default(0.00) @db.Decimal(10, 2)
+  taxGstAmount    Decimal        @db.Decimal(10, 2)
+  shippingFee     Decimal        @default(0.00) @db.Decimal(10, 2)
+  totalAmount     Decimal        @db.Decimal(10, 2)
+  
+  couponCode      String?
+  
+  shippingAddress Json           // Full Indian address with pincode
+  trackingNumber  String?
+  courierPartner  String?        // e.g. "BlueDart", "Delhivery", "Sellbar Express"
+  
+  items           OrderItem[]
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+}
+
+model OrderItem {
+  id              String             @id @default(uuid())
+  orderId         String
+  order           CustomerOrder      @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId       String
+  product         RefurbishedProduct @relation(fields: [productId], references: [id])
+  quantity        Int                @default(1)
+  unitPrice       Decimal            @db.Decimal(10, 2)
+  totalPrice      Decimal            @db.Decimal(10, 2)
+}
+
+model Coupon {
+  id              String         @id @default(uuid())
+  code            String         @unique
+  description     String
+  discountType    String         // PERCENTAGE or FLAT
+  discountValue   Decimal        @db.Decimal(10, 2)
+  minOrderValue   Decimal        @default(0.00) @db.Decimal(10, 2)
+  maxDiscount     Decimal?       @db.Decimal(10, 2)
+  isActive        Boolean        @default(true)
+  expiryDate      DateTime?
+}
+
+model ProductReview {
+  id              String             @id @default(uuid())
+  productId       String
+  product         RefurbishedProduct @relation(fields: [productId], references: [id], onDelete: Cascade)
+  userId          String
+  user            User               @relation(fields: [userId], references: [id])
+  rating          Int                @default(5)
+  title           String
+  comment         String
+  verifiedPurchase Boolean           @default(true)
+  createdAt       DateTime           @default(now())
+}
+
+model ServiceBooking {
+  id              String         @id @default(uuid())
+  bookingNumber   String         @unique
+  userId          String
+  user            User           @relation(fields: [userId], references: [id])
+  serviceType     String         // SCREEN_REPLACEMENT, BATTERY_REPLACEMENT, CHARGING_PORT, DIAGNOSTICS
+  deviceDetails   String         // e.g. "iPhone 13 128GB Starlight"
+  estimatedCost   Decimal        @db.Decimal(10, 2)
+  pincode         String
+  address         String
+  scheduledDate   DateTime
+  scheduledSlot   String
+  status          ServiceStatus  @default(BOOKED)
+  technicianNotes String?
+  createdAt       DateTime       @default(now())
+}
+
+model AuditLog {
+  id          String   @id @default(uuid())
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id])
+  action      String   // e.g. "REVISED_BUYBACK_OFFER", "PAYOUT_RELEASED"
+  entityType  String
+  entityId    String
+  metadata    Json?
+  ipAddress   String?
+  createdAt   DateTime @default(now())
+}

@@ -1,0 +1,1071 @@
+{
+  "categories": [
+    {
+      "id": "cat-phones",
+      "slug": "phones",
+      "name": "Smartphones",
+      "description": "Sell or buy certified refurbished iPhones, Samsung, OnePlus & more.",
+      "type": "SMARTPHONE",
+      "icon": "Smartphone",
+      "imageUrl": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=600&q=80",
+      "isActive": true,
+      "popularBrands": [
+        "Apple",
+        "Samsung",
+        "OnePlus",
+        "Xiaomi"
+      ]
+    },
+    {
+      "id": "cat-laptops",
+      "slug": "laptops",
+      "name": "Laptops",
+      "description": "MacBooks, Dell XPS, HP & Lenovo with 32-point check & warranty.",
+      "type": "LAPTOP",
+      "icon": "Laptop",
+      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80",
+      "isActive": true,
+      "popularBrands": [
+        "Apple",
+        "Dell",
+        "HP",
+        "Lenovo"
+      ]
+    },
+    {
+      "id": "cat-tablets",
+      "slug": "tablets",
+      "name": "Tablets & iPads",
+      "description": "Apple iPads and Samsung Galaxy Tabs in like-new condition.",
+      "type": "TABLET",
+      "icon": "Tablet",
+      "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=600&q=80",
+      "isActive": true,
+      "popularBrands": [
+        "Apple",
+        "Samsung"
+      ]
+    },
+    {
+      "id": "cat-smartwatches",
+      "slug": "smartwatches",
+      "name": "Smartwatches",
+      "description": "Apple Watch & Galaxy Watch series tested for battery & sensors.",
+      "type": "SMARTWATCH",
+      "icon": "Watch",
+      "imageUrl": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80",
+      "isActive": true,
+      "popularBrands": [
+        "Apple",
+        "Samsung"
+      ]
+    }
+  ],
+  "brands": [
+    {
+      "id": "b-apple",
+      "slug": "apple",
+      "name": "Apple",
+      "categoryId": "cat-phones"
+    },
+    {
+      "id": "b-samsung",
+      "slug": "samsung",
+      "name": "Samsung",
+      "categoryId": "cat-phones"
+    },
+    {
+      "id": "b-oneplus",
+      "slug": "oneplus",
+      "name": "OnePlus",
+      "categoryId": "cat-phones"
+    },
+    {
+      "id": "b-xiaomi",
+      "slug": "xiaomi",
+      "name": "Xiaomi",
+      "categoryId": "cat-phones"
+    },
+    {
+      "id": "b-dell",
+      "slug": "dell",
+      "name": "Dell",
+      "categoryId": "cat-laptops"
+    },
+    {
+      "id": "b-hp",
+      "slug": "hp",
+      "name": "HP",
+      "categoryId": "cat-laptops"
+    },
+    {
+      "id": "b-lenovo",
+      "slug": "lenovo",
+      "name": "Lenovo",
+      "categoryId": "cat-laptops"
+    }
+  ],
+  "deviceModels": [
+    {
+      "id": "dm-ip16pro",
+      "slug": "apple-iphone-16-pro",
+      "name": "Apple iPhone 16 Pro",
+      "categoryId": "cat-phones",
+      "brandId": "b-apple",
+      "baseResalePrice": 94000,
+      "imageUrl": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2024,
+      "variants": [
+        {
+          "id": "v-ip16p-128",
+          "modelId": "dm-ip16pro",
+          "title": "128 GB",
+          "storage": "128GB",
+          "ram": "8GB",
+          "priceOffset": 0
+        },
+        {
+          "id": "v-ip16p-256",
+          "modelId": "dm-ip16pro",
+          "title": "256 GB",
+          "storage": "256GB",
+          "ram": "8GB",
+          "priceOffset": 9500
+        },
+        {
+          "id": "v-ip16p-512",
+          "modelId": "dm-ip16pro",
+          "title": "512 GB",
+          "storage": "512GB",
+          "ram": "8GB",
+          "priceOffset": 21000
+        }
+      ]
+    },
+    {
+      "id": "dm-ip15",
+      "slug": "apple-iphone-15",
+      "name": "Apple iPhone 15",
+      "categoryId": "cat-phones",
+      "brandId": "b-apple",
+      "baseResalePrice": 51000,
+      "imageUrl": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2023,
+      "variants": [
+        {
+          "id": "v-ip15-128",
+          "modelId": "dm-ip15",
+          "title": "128 GB",
+          "storage": "128GB",
+          "ram": "6GB",
+          "priceOffset": 0
+        },
+        {
+          "id": "v-ip15-256",
+          "modelId": "dm-ip15",
+          "title": "256 GB",
+          "storage": "256GB",
+          "ram": "6GB",
+          "priceOffset": 7000
+        }
+      ]
+    },
+    {
+      "id": "dm-ip14",
+      "slug": "apple-iphone-14",
+      "name": "Apple iPhone 14",
+      "categoryId": "cat-phones",
+      "brandId": "b-apple",
+      "baseResalePrice": 38500,
+      "imageUrl": "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2022,
+      "variants": [
+        {
+          "id": "v-ip14-128",
+          "modelId": "dm-ip14",
+          "title": "128 GB",
+          "storage": "128GB",
+          "ram": "6GB",
+          "priceOffset": 0
+        },
+        {
+          "id": "v-ip14-256",
+          "modelId": "dm-ip14",
+          "title": "256 GB",
+          "storage": "256GB",
+          "ram": "6GB",
+          "priceOffset": 5500
+        }
+      ]
+    },
+    {
+      "id": "dm-ip13",
+      "slug": "apple-iphone-13",
+      "name": "Apple iPhone 13",
+      "categoryId": "cat-phones",
+      "brandId": "b-apple",
+      "baseResalePrice": 30000,
+      "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2021,
+      "variants": [
+        {
+          "id": "v-ip13-128",
+          "modelId": "dm-ip13",
+          "title": "128 GB",
+          "storage": "128GB",
+          "ram": "4GB",
+          "priceOffset": 0
+        },
+        {
+          "id": "v-ip13-256",
+          "modelId": "dm-ip13",
+          "title": "256 GB",
+          "storage": "256GB",
+          "ram": "4GB",
+          "priceOffset": 4500
+        }
+      ]
+    },
+    {
+      "id": "dm-s24u",
+      "slug": "samsung-galaxy-s24-ultra",
+      "name": "Samsung Galaxy S24 Ultra 5G",
+      "categoryId": "cat-phones",
+      "brandId": "b-samsung",
+      "baseResalePrice": 78000,
+      "imageUrl": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2024,
+      "variants": [
+        {
+          "id": "v-s24u-256",
+          "modelId": "dm-s24u",
+          "title": "12GB / 256GB",
+          "storage": "256GB",
+          "ram": "12GB",
+          "priceOffset": 0
+        },
+        {
+          "id": "v-s24u-512",
+          "modelId": "dm-s24u",
+          "title": "12GB / 512GB",
+          "storage": "512GB",
+          "ram": "12GB",
+          "priceOffset": 9000
+        }
+      ]
+    },
+    {
+      "id": "dm-s23",
+      "slug": "samsung-galaxy-s23",
+      "name": "Samsung Galaxy S23 5G",
+      "categoryId": "cat-phones",
+      "brandId": "b-samsung",
+      "baseResalePrice": 36000,
+      "imageUrl": "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2023,
+      "variants": [
+        {
+          "id": "v-s23-128",
+          "modelId": "dm-s23",
+          "title": "8GB / 128GB",
+          "storage": "128GB",
+          "ram": "8GB",
+          "priceOffset": 0
+        },
+        {
+          "id": "v-s23-256",
+          "modelId": "dm-s23",
+          "title": "8GB / 256GB",
+          "storage": "256GB",
+          "ram": "8GB",
+          "priceOffset": 4000
+        }
+      ]
+    },
+    {
+      "id": "dm-op12",
+      "slug": "oneplus-12",
+      "name": "OnePlus 12 5G",
+      "categoryId": "cat-phones",
+      "brandId": "b-oneplus",
+      "baseResalePrice": 42000,
+      "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2024,
+      "variants": [
+        {
+          "id": "v-op12-256",
+          "modelId": "dm-op12",
+          "title": "12GB / 256GB",
+          "storage": "256GB",
+          "ram": "12GB",
+          "priceOffset": 0
+        },
+        {
+          "id": "v-op12-512",
+          "modelId": "dm-op12",
+          "title": "16GB / 512GB",
+          "storage": "512GB",
+          "ram": "16GB",
+          "priceOffset": 6500
+        }
+      ]
+    },
+    {
+      "id": "dm-macm2",
+      "slug": "apple-macbook-air-m2",
+      "name": "Apple MacBook Air 13.6\" M2",
+      "categoryId": "cat-laptops",
+      "brandId": "b-apple",
+      "baseResalePrice": 62000,
+      "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2022,
+      "variants": [
+        {
+          "id": "v-macm2-256",
+          "modelId": "dm-macm2",
+          "title": "8GB RAM / 256GB SSD",
+          "storage": "256GB",
+          "ram": "8GB",
+          "priceOffset": 0
+        },
+        {
+          "id": "v-macm2-512",
+          "modelId": "dm-macm2",
+          "title": "8GB RAM / 512GB SSD",
+          "storage": "512GB",
+          "ram": "8GB",
+          "priceOffset": 12000
+        }
+      ]
+    },
+    {
+      "id": "dm-dellxps",
+      "slug": "dell-xps-13",
+      "name": "Dell XPS 13 Core i7 13th Gen",
+      "categoryId": "cat-laptops",
+      "brandId": "b-dell",
+      "baseResalePrice": 58000,
+      "imageUrl": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2023,
+      "variants": [
+        {
+          "id": "v-dell-512",
+          "modelId": "dm-dellxps",
+          "title": "16GB RAM / 512GB SSD",
+          "storage": "512GB",
+          "ram": "16GB",
+          "priceOffset": 0
+        }
+      ]
+    },
+    {
+      "id": "dm-ipad-air-m2",
+      "slug": "apple-ipad-air-m2",
+      "name": "Apple iPad Air 11\" M2 (Wi-Fi)",
+      "categoryId": "cat-tablets",
+      "brandId": "b-apple",
+      "baseResalePrice": 40000,
+      "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2024,
+      "variants": [
+        {
+          "id": "v-ipad-128",
+          "modelId": "dm-ipad-air-m2",
+          "title": "128 GB",
+          "storage": "128GB",
+          "priceOffset": 0
+        },
+        {
+          "id": "v-ipad-256",
+          "modelId": "dm-ipad-air-m2",
+          "title": "256 GB",
+          "storage": "256GB",
+          "priceOffset": 7000
+        }
+      ]
+    },
+    {
+      "id": "dm-aw-s9",
+      "slug": "apple-watch-series-9",
+      "name": "Apple Watch Series 9 GPS 45mm",
+      "categoryId": "cat-smartwatches",
+      "brandId": "b-apple",
+      "baseResalePrice": 24000,
+      "imageUrl": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80",
+      "popular": true,
+      "releaseYear": 2023,
+      "variants": [
+        {
+          "id": "v-aw-45",
+          "modelId": "dm-aw-s9",
+          "title": "45mm Aluminum",
+          "priceOffset": 0
+        }
+      ]
+    }
+  ],
+  "refurbishedProducts": [
+    {
+      "slug": "test-refurb-device-1792241958351",
+      "title": "Samsung Galaxy S23 FE 5G (128GB) - Like New",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "mrpPrice": 59999,
+      "sellbarPrice": 34999,
+      "stockCount": 15,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 95,
+      "color": "Mint Green",
+      "storage": "128GB",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Grade": "Grade A",
+        "RAM": "8GB"
+      },
+      "description": "Certified like new with 6 months warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 10,
+      "id": "prod-1792241958351",
+      "createdAt": "2026-10-17T12:59:18.351Z"
+    },
+    {
+      "slug": "test-refurb-device-1792239694111",
+      "title": "Samsung Galaxy S23 FE 5G (128GB) - Like New",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "mrpPrice": 59999,
+      "sellbarPrice": 34999,
+      "stockCount": 14,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 95,
+      "color": "Mint Green",
+      "storage": "128GB",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Grade": "Grade A",
+        "RAM": "8GB"
+      },
+      "description": "Certified like new with 6 months warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 10,
+      "id": "prod-1792239694115",
+      "createdAt": "2026-10-17T12:21:34.115Z"
+    },
+    {
+      "slug": "test-refurb-device-1792238846463",
+      "title": "Samsung Galaxy S23 FE 5G (128GB) - Like New",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "mrpPrice": 59999,
+      "sellbarPrice": 34999,
+      "stockCount": 14,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 95,
+      "color": "Mint Green",
+      "storage": "128GB",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Grade": "Grade A",
+        "RAM": "8GB"
+      },
+      "description": "Certified like new with 6 months warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 10,
+      "id": "prod-1792238846464",
+      "createdAt": "2026-10-17T12:07:26.464Z"
+    },
+    {
+      "slug": "test-refurb-device-1792236763337",
+      "title": "Samsung Galaxy S23 FE 5G (128GB) - Like New",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "mrpPrice": 59999,
+      "sellbarPrice": 34999,
+      "stockCount": 14,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 95,
+      "color": "Mint Green",
+      "storage": "128GB",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Grade": "Grade A",
+        "RAM": "8GB"
+      },
+      "description": "Certified like new with 6 months warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 10,
+      "id": "prod-1792236763338",
+      "createdAt": "2026-10-17T11:32:43.338Z"
+    },
+    {
+      "slug": "test-refurb-device-1792236660273",
+      "title": "Samsung Galaxy S23 FE 5G (128GB) - Like New",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "mrpPrice": 59999,
+      "sellbarPrice": 34999,
+      "stockCount": 14,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 95,
+      "color": "Mint Green",
+      "storage": "128GB",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Grade": "Grade A",
+        "RAM": "8GB"
+      },
+      "description": "Certified like new with 6 months warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 10,
+      "id": "prod-1792236660274",
+      "createdAt": "2026-10-17T11:31:00.274Z"
+    },
+    {
+      "slug": "test-refurb-device-1792223304733",
+      "title": "Samsung Galaxy S23 FE 5G (128GB) - Like New",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "mrpPrice": 59999,
+      "sellbarPrice": 34999,
+      "stockCount": 14,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 95,
+      "color": "Mint Green",
+      "storage": "128GB",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Grade": "Grade A",
+        "RAM": "8GB"
+      },
+      "description": "Certified like new with 6 months warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 10,
+      "id": "prod-1792223304734",
+      "createdAt": "2026-10-17T07:48:24.734Z"
+    },
+    {
+      "slug": "test-refurb-device-1792223182791",
+      "title": "Samsung Galaxy S23 FE 5G (128GB) - Like New",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "mrpPrice": 59999,
+      "sellbarPrice": 34999,
+      "stockCount": 14,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 95,
+      "color": "Mint Green",
+      "storage": "128GB",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Grade": "Grade A",
+        "RAM": "8GB"
+      },
+      "description": "Certified like new with 6 months warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 10,
+      "id": "prod-1792223182802",
+      "createdAt": "2026-10-17T07:46:22.802Z"
+    },
+    {
+      "id": "prod-ip15-flawless",
+      "slug": "sellbar-certified-apple-iphone-15-128gb-blue-flawless",
+      "title": "Apple iPhone 15 (128GB) - Flawless Grade A+",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-apple",
+      "brandName": "Apple",
+      "modelId": "dm-ip15",
+      "mrpPrice": 79900,
+      "sellbarPrice": 56999,
+      "stockCount": 6,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 100,
+      "color": "Pastel Blue",
+      "storage": "128GB",
+      "ram": "6GB",
+      "warrantyMonths": 12,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Display": "6.1-inch Super Retina XDR OLED with Dynamic Island",
+        "Processor": "A16 Bionic chip with 5-core GPU",
+        "Main Camera": "48MP Main with 2x Telephoto + 12MP Ultra Wide",
+        "Front Camera": "12MP TrueDepth with Autofocus",
+        "Battery Health": "100% Tested Original Capacity",
+        "OS": "iOS 18 upgradable",
+        "Included in Box": "Sellbar Eco-Pack, Certified Braided Type-C Cable, Warranty Certificate"
+      },
+      "description": "Sellbar Flawless Grade: Zero cosmetic scratches or scuffs. Screen and chassis in pristine condition. Passed all 32 diagnostic tests with 100% battery health and 12-month doorstep warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewsCount": 142,
+      "createdAt": "2026-10-17T05:18:35.848Z",
+      "model3dUrl": "/assets/3d/smartphone.glb",
+      "colors": [
+        "Pastel Blue",
+        "Silver Starlight",
+        "Deep Titanium"
+      ],
+      "availableStorages": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ]
+    },
+    {
+      "id": "prod-ip14-likenew",
+      "slug": "sellbar-certified-apple-iphone-14-128gb-midnight-like-new",
+      "title": "Apple iPhone 14 (128GB) - Like New Grade A",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-apple",
+      "brandName": "Apple",
+      "modelId": "dm-ip14",
+      "mrpPrice": 69900,
+      "sellbarPrice": 42499,
+      "stockCount": 14,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 91,
+      "color": "Midnight Black",
+      "storage": "128GB",
+      "ram": "6GB",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Display": "6.1-inch Super Retina XDR OLED",
+        "Processor": "A15 Bionic chip",
+        "Main Camera": "Dual 12MP System with Action Mode",
+        "Front Camera": "12MP TrueDepth Camera",
+        "Battery Health": "91% Tested Health",
+        "Warranty": "6 Months Sellbar Doorstep Warranty"
+      },
+      "description": "Sellbar Like New Grade: Negligible micro-scratches only visible under harsh direct light. Display is clean and touch is 100% responsive. 6 months warranty included.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 89,
+      "createdAt": "2026-10-17T05:18:35.849Z",
+      "model3dUrl": "/assets/3d/smartphone.glb",
+      "colors": [
+        "Midnight Black",
+        "Silver Starlight",
+        "Deep Titanium"
+      ],
+      "availableStorages": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ]
+    },
+    {
+      "id": "prod-s24u-flawless",
+      "slug": "sellbar-certified-samsung-s24-ultra-512gb-titanium-gray-flawless",
+      "title": "Samsung Galaxy S24 Ultra 5G (12GB / 512GB) - Flawless Grade A+",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-samsung",
+      "brandName": "Samsung",
+      "modelId": "dm-s24u",
+      "mrpPrice": 139999,
+      "sellbarPrice": 89999,
+      "stockCount": 5,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 98,
+      "color": "Titanium Gray",
+      "storage": "512GB",
+      "ram": "12GB",
+      "warrantyMonths": 12,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Display": "6.8-inch Dynamic AMOLED 2X 120Hz Gorilla Armor",
+        "Processor": "Snapdragon 8 Gen 3 for Galaxy",
+        "Camera": "200MP Main + 50MP 5x Periscope + 10MP 3x + 12MP Ultra Wide",
+        "S-Pen": "Built-in S-Pen included & tested",
+        "Battery Health": "98% Capacity with 45W Fast Charging"
+      },
+      "description": "Sellbar Certified Titanium Flagship: Mint condition with zero blemishes. AI features and S-Pen fully calibrated. Includes 1-year comprehensive warranty.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewsCount": 67,
+      "createdAt": "2026-10-17T05:18:35.849Z",
+      "model3dUrl": "/assets/3d/smartphone.glb",
+      "colors": [
+        "Titanium Gray",
+        "Silver Starlight",
+        "Deep Titanium"
+      ],
+      "availableStorages": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ]
+    },
+    {
+      "id": "prod-macm2-likenew",
+      "slug": "sellbar-certified-macbook-air-m2-8gb-256gb-starlight",
+      "title": "Apple MacBook Air 13.6\" M2 (8GB / 256GB SSD) - Like New",
+      "categoryId": "cat-laptops",
+      "categoryName": "Laptops",
+      "brandId": "b-apple",
+      "brandName": "Apple",
+      "modelId": "dm-macm2",
+      "mrpPrice": 99900,
+      "sellbarPrice": 68999,
+      "stockCount": 6,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 94,
+      "color": "Starlight",
+      "storage": "256GB SSD",
+      "ram": "8GB Unified",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Display": "13.6-inch Liquid Retina Display (500 nits)",
+        "Processor": "Apple M2 chip with 8-core CPU and 8-core GPU",
+        "Memory": "8GB Unified Memory",
+        "Storage": "256GB Ultrafast SSD",
+        "Battery Cycle Count": "Only 58 cycles tested",
+        "Charger": "Original MagSafe 3 Cable & Apple Adapter included"
+      },
+      "description": "Sellbar Certified Refurbished MacBook: Tested thermal performance, keyboard, MagSafe, and battery endurance. Pristine keyboard deck and crisp Liquid Retina screen.",
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewsCount": 114,
+      "createdAt": "2026-10-17T05:18:35.849Z",
+      "model3dUrl": "/assets/3d/smartphone.glb",
+      "colors": [
+        "Starlight",
+        "Silver Starlight",
+        "Deep Titanium"
+      ],
+      "availableStorages": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ]
+    },
+    {
+      "id": "prod-op12-flawless",
+      "slug": "sellbar-certified-oneplus-12-16gb-512gb-silky-black",
+      "title": "OnePlus 12 5G (16GB / 512GB) - Flawless Grade A+",
+      "categoryId": "cat-phones",
+      "categoryName": "Smartphones",
+      "brandId": "b-oneplus",
+      "brandName": "OnePlus",
+      "modelId": "dm-op12",
+      "mrpPrice": 69999,
+      "sellbarPrice": 48999,
+      "stockCount": 7,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 99,
+      "color": "Silky Black",
+      "storage": "512GB",
+      "ram": "16GB",
+      "warrantyMonths": 12,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Display": "6.82-inch 2K ProXDR Display 120Hz",
+        "Processor": "Snapdragon 8 Gen 3",
+        "Camera": "4th Gen Hasselblad Camera System",
+        "Battery": "5400 mAh with 100W SuperVOOC support"
+      },
+      "description": "Sellbar Flawless Grade: Zero cosmetic marks, exceptional battery longevity, factory wiped and verified with 12 months full warranty.",
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 43,
+      "createdAt": "2026-10-17T05:18:35.849Z",
+      "model3dUrl": "/assets/3d/smartphone.glb",
+      "colors": [
+        "Silky Black",
+        "Silver Starlight",
+        "Deep Titanium"
+      ],
+      "availableStorages": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ]
+    },
+    {
+      "id": "prod-dellxps-smartvalue",
+      "slug": "sellbar-certified-dell-xps-13-intel-i7-16gb-512gb",
+      "title": "Dell XPS 13 (Core i7 13th Gen / 16GB / 512GB SSD) - Smart Value",
+      "categoryId": "cat-laptops",
+      "categoryName": "Laptops",
+      "brandId": "b-dell",
+      "brandName": "Dell",
+      "modelId": "dm-dellxps",
+      "mrpPrice": 124990,
+      "sellbarPrice": 64999,
+      "stockCount": 4,
+      "conditionGrade": "SMART_VALUE",
+      "batteryHealth": 88,
+      "color": "Platinum Silver",
+      "storage": "512GB SSD",
+      "ram": "16GB LPDDR5",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Display": "13.4-inch FHD+ InfinityEdge Anti-Glare",
+        "Processor": "Intel Core i7-1350P (12 cores)",
+        "Memory": "16GB 6000MHz Dual Channel",
+        "Storage": "512GB PCIe Gen4 NVMe",
+        "Weight": "1.17 kg Ultraportable"
+      },
+      "description": "Sellbar Smart Value Grade: Minor scuffs on base aluminum plate. Display, keyboard, trackpad, and motherboard passed 32-point inspection with 100% test pass. Massive 48% discount vs MRP.",
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.7,
+      "reviewsCount": 31,
+      "createdAt": "2026-10-17T05:18:35.849Z",
+      "model3dUrl": "/assets/3d/smartphone.glb",
+      "colors": [
+        "Platinum Silver",
+        "Silver Starlight",
+        "Deep Titanium"
+      ],
+      "availableStorages": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ]
+    },
+    {
+      "id": "prod-ipad-air-m2-flawless",
+      "slug": "sellbar-certified-ipad-air-11-m2-128gb-space-gray",
+      "title": "Apple iPad Air 11\" M2 (128GB Wi-Fi) - Flawless Grade A+",
+      "categoryId": "cat-tablets",
+      "categoryName": "Tablets & iPads",
+      "brandId": "b-apple",
+      "brandName": "Apple",
+      "modelId": "dm-ipad-air-m2",
+      "mrpPrice": 59900,
+      "sellbarPrice": 46999,
+      "stockCount": 9,
+      "conditionGrade": "FLAWLESS",
+      "batteryHealth": 100,
+      "color": "Space Gray",
+      "storage": "128GB",
+      "ram": "8GB",
+      "warrantyMonths": 12,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Display": "11-inch Liquid Retina with True Tone & P3 wide color",
+        "Chip": "Apple M2 with 8-core CPU and 10-core GPU",
+        "Accessories Supported": "Apple Pencil Pro & Magic Keyboard",
+        "Speakers": "Landscape stereo speakers with Spatial Audio"
+      },
+      "description": "Pristine Flawless condition. Perfect for digital art, student note-taking, and professional multitasking. Includes 1-year doorstep warranty.",
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewsCount": 52,
+      "createdAt": "2026-10-17T05:18:35.849Z",
+      "model3dUrl": "/assets/3d/smartphone.glb",
+      "colors": [
+        "Space Gray",
+        "Silver Starlight",
+        "Deep Titanium"
+      ],
+      "availableStorages": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ]
+    },
+    {
+      "id": "prod-aw-s9-likenew",
+      "slug": "sellbar-certified-apple-watch-series-9-45mm-midnight",
+      "title": "Apple Watch Series 9 GPS 45mm - Like New Grade A",
+      "categoryId": "cat-smartwatches",
+      "categoryName": "Smartwatches",
+      "brandId": "b-apple",
+      "brandName": "Apple",
+      "modelId": "dm-aw-s9",
+      "mrpPrice": 44900,
+      "sellbarPrice": 28999,
+      "stockCount": 11,
+      "conditionGrade": "LIKE_NEW",
+      "batteryHealth": 96,
+      "color": "Midnight Aluminum",
+      "storage": "64GB",
+      "warrantyMonths": 6,
+      "inspectionScore": 32,
+      "images": [
+        "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specifications": {
+        "Display": "Always-On Retina display up to 2000 nits",
+        "Chip": "S9 SiP with 4-core Neural Engine & Double Tap gesture",
+        "Sensors": "Blood Oxygen, ECG, Heart Rate, Temperature Sensing",
+        "Water Resistance": "50 meters swimproof"
+      },
+      "description": "Passed sensor diagnostics, battery check, and water-resistance seal inspection. Includes magnetic fast charging cable and verified sport band.",
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 78,
+      "createdAt": "2026-10-17T05:18:35.849Z",
+      "model3dUrl": "/assets/3d/smartphone.glb",
+      "colors": [
+        "Midnight Aluminum",
+        "Silver Starlight",
+        "Deep Titanium"
+      ],
+      "availableStorages": [
+        "128GB",
+        "256GB",
+        "512GB"
+      ]
+    }
+  ],
+  "coupons": [
+    {
+      "id": "c-sellbar500",
+      "code": "SELLBAR500",
+      "description": "₹500 flat discount on orders above ₹5,000",
+      "discountType": "FLAT",
+      "discountValue": 500,
+      "minOrderValue": 5000,
+      "isActive": true
+    },
+    {
+      "id": "c-festive10",
+      "code": "FESTIVE10",
+      "description": "10% instant discount up to ₹2,500 on orders above ₹10,000",
+      "discountType": "PERCENTAGE",
+      "discountValue": 10,
+      "minOrderValue": 10000,
+      "maxDiscount": 2500,
+      "isActive": true
+    },
+    {
+      "id": "c-sellsmart",
+      "code": "SELLSMART",
+      "description": "₹300 off your first purchase",
+      "discountType": "FLAT",
+      "discountValue": 300,
+      "minOrderValue": 2000,
+      "isActive": true
+    }
+  ],
+  "users": [
+    {
+      "name": "Customer 3210",
+      "phone": "9876543210",
+      "role": "CUSTOMER",
+      "walletBalance": 0,
+      "id": "usr-1792312991537",
+      "createdAt": "2026-10-18T08:43:11.537Z"
+    }
+  ],
+  "userAddresses": [],
+  "buybackOrders": [],
+  "customerOrders": [],
+  "serviceBookings": []
+}
