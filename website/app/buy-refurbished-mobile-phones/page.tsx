@@ -1,12 +1,18 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import BuyRefurbishedPage from '../buy-refurbished/page';
+import { db } from '@/lib/db';
+import BuyRefurbishedMobilePhonesClient from '@/components/BuyRefurbishedMobilePhonesClient';
 
 export const metadata: Metadata = {
-  title: 'Buy Certified Refurbished Mobile Phones | Up to 70% Off | Sellbar.in',
-  description: 'Shop top-rated refurbished smartphones with 32-point inspection, 12 months warranty and 7 days replacement guarantee.',
+  title: "Sellbar: Buy Refurbished Mobile Phone Online in India at Best Price",
+  description:
+    'Buy Refurbished Mobile Phone online at an affordable price in India at Sellbar.in. Exclusive discounts, 6-month doorstep warranty, 32-point inspection, and free express delivery. Order Now!',
+  keywords:
+    'buy refurbished mobile phone, second hand mobile phone, refurbished iphone, renewed samsung phones, buy used mobile, cashify clone, sellbar assured',
 };
 
-export default function Page() {
-  return <BuyRefurbishedPage searchParams={Promise.resolve({ category: 'phones' })} />;
+export default function BuyRefurbishedMobilePhonesPage() {
+  const products = db.getRefurbishedProducts({ categoryId: 'cat-phones' });
+
+  return <BuyRefurbishedMobilePhonesClient initialProducts={products} />;
 }

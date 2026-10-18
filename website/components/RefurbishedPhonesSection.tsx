@@ -14,6 +14,7 @@ export default function RefurbishedPhonesSection() {
     {
       id: 'phone-oppo-reno15',
       title: 'OPPO Reno15 Pro 5G - Refurbished',
+      href: '/buy-refurbished-mobile-phones/renewed-oppo-reno15-pro/sale/171757',
       price: '₹54,999',
       mrp: '₹79,999',
       discountOff: '₹25,000 OFF',
@@ -25,6 +26,7 @@ export default function RefurbishedPhonesSection() {
     {
       id: 'phone-samsung-s21',
       title: 'Samsung Galaxy S21 Ultra 5G - Refurbished',
+      href: '/buy-refurbished-mobile-phones/samsung-galaxy-s21-ultra-5g-refurbished',
       price: '₹36,699',
       mrp: '₹73,600',
       discountOff: '₹36,901 OFF',
@@ -36,6 +38,7 @@ export default function RefurbishedPhonesSection() {
     {
       id: 'phone-samsung-s24',
       title: 'Samsung Galaxy S24 Ultra 5G - Refurbished',
+      href: '/buy-refurbished-mobile-phones/sellbar-certified-samsung-s24-ultra-512gb-titanium-gray-flawless',
       price: '₹63,999',
       mrp: '₹1,34,999',
       discountOff: '₹71,000 OFF',
@@ -48,6 +51,7 @@ export default function RefurbishedPhonesSection() {
     {
       id: 'phone-oneplus-12',
       title: 'OnePlus 12 - Refurbished',
+      href: '/buy-refurbished-mobile-phones/sellbar-certified-oneplus-12-16gb-512gb-silky-black',
       price: '₹39,299',
       mrp: '₹69,999',
       discountOff: '₹30,700 OFF',
@@ -59,6 +63,7 @@ export default function RefurbishedPhonesSection() {
     {
       id: 'phone-samsung-fold5',
       title: 'Samsung Galaxy Z Fold5 - Refurbished',
+      href: '/buy-refurbished-mobile-phones/samsung-galaxy-z-fold5-5g-refurbished',
       price: '₹69,499',
       mrp: '₹84,399',
       discountOff: '₹14,900 OFF',
@@ -70,6 +75,7 @@ export default function RefurbishedPhonesSection() {
     {
       id: 'phone-samsung-flip6',
       title: 'Samsung Galaxy Z Flip6 5G - Refurbished',
+      href: '/buy-refurbished-mobile-phones/samsung-galaxy-z-flip6-5g-refurbished',
       price: '₹48,899',
       mrp: '₹1,09,999',
       discountOff: '₹61,100 OFF',
@@ -81,6 +87,7 @@ export default function RefurbishedPhonesSection() {
     {
       id: 'phone-oneplus-nord2',
       title: 'OnePlus Nord 2 5G - Refurbished',
+      href: '/buy-refurbished-mobile-phones/oneplus-nord-2-5g-refurbished',
       price: '₹16,699',
       mrp: '₹33,200',
       discountOff: '₹16,501 OFF',
@@ -92,6 +99,7 @@ export default function RefurbishedPhonesSection() {
     {
       id: 'phone-iphone-14',
       title: 'Apple iPhone 14 (128GB) - Refurbished',
+      href: '/buy-refurbished-mobile-phones/sellbar-certified-apple-iphone-14-128gb-midnight-like-new',
       price: '₹38,999',
       mrp: '₹69,900',
       discountOff: '₹30,901 OFF',
@@ -103,6 +111,7 @@ export default function RefurbishedPhonesSection() {
     {
       id: 'phone-iphone-13',
       title: 'Apple iPhone 13 (128GB) - Refurbished',
+      href: '/buy-refurbished-mobile-phones/sellbar-certified-apple-iphone-13-128gb-starlight',
       price: '₹32,999',
       mrp: '₹59,900',
       discountOff: '₹26,901 OFF',
@@ -186,7 +195,7 @@ export default function RefurbishedPhonesSection() {
           {phones.map((phone) => (
             <Link
               key={phone.id}
-              href={`/buy-refurbished?id=${phone.id}`}
+              href={phone.href}
               className="w-48 sm:w-60 shrink-0 bg-white rounded-md border-2 border-gray-100 hover:border-gray-300 hover:shadow-md transition-all duration-200 flex flex-col justify-between p-3 relative cursor-pointer"
             >
               <div>
