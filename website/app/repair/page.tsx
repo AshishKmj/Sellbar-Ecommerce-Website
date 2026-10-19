@@ -31,14 +31,17 @@ import {
 } from 'lucide-react';
 
 const REPAIR_BRANDS = [
-  { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' },
-  { name: 'Samsung', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg' },
-  { name: 'Xiaomi', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Xiaomi_logo_%282021-%29.svg' },
-  { name: 'OnePlus', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/OP_LU_Reg_1_Line_POS_RGB.svg' },
-  { name: 'Vivo', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Vivo_mobile_logo.png' },
-  { name: 'Oppo', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/OPPO_Logo.svg' },
-  { name: 'Realme', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a2/Realme_logo.svg' },
-  { name: 'Google Pixel', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
+  { name: 'Apple', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/2e7cdc22-5a5f.jpg' },
+  { name: 'Xiaomi', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/cb96df6e-080f.jpg' },
+  { name: 'Samsung', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/406a512d-e8dd.jpg' },
+  { name: 'OnePlus', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/dfb6c340-010f.jpg' },
+  { name: 'Vivo', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/20922c34-8afc.jpg' },
+  { name: 'Oppo', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/ac5c9a7b-76b5.jpg' },
+  { name: 'Realme', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/0124cc45-3a6c.jpg' },
+  { name: 'Motorola', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/1dcd7fda-0141.jpg' },
+  { name: 'Google Pixel', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/dacc50a2-77a9.jpg' },
+  { name: 'POCO', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/3e072dc2-6d7b.jpg' },
+  { name: 'Nokia', logo: 'https://s3ng.cashify.in/cashify/brand/img/xhdpi/fef4e5ae-6507.jpg' },
 ];
 
 const REPAIR_SERVICES = [

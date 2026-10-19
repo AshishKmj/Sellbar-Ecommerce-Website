@@ -229,7 +229,7 @@ export default function RentPage() {
   return (
     <div className="bg-[#f8fafc] min-h-screen pb-16">
       {/* 1. HERO HEADER */}
-      <div className="bg-gradient-to-r from-slate-950 via-teal-950 to-slate-950 text-white relative overflow-hidden">
+      <div className="bg-linear-to-r from-slate-950 via-teal-950 to-slate-950 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#13b59b]/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 relative z-10">
@@ -606,7 +606,7 @@ export default function RentPage() {
           <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
             <div className="bg-white rounded-3xl max-w-md w-full p-6 text-slate-900 shadow-2xl space-y-4 animate-in fade-in zoom-in duration-200">
               <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-                <Check className="w-6 h-6 stroke-[3]" />
+                <Check className="w-6 h-6 stroke-3" />
               </div>
 
               <div className="text-center">

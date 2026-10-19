@@ -681,7 +681,7 @@ export default function BuyRefurbishedMobilePhonesClient({
         </section>
 
         {/* 3. FLASH SALE BANNER & CAROUSEL */}
-        <section className="bg-gradient-to-r from-slate-900 via-teal-950 to-slate-900 rounded-3xl p-5 sm:p-7 text-white shadow-xl relative overflow-hidden">
+        <section className="bg-linear-to-r from-slate-900 via-teal-950 to-slate-900 rounded-3xl p-5 sm:p-7 text-white shadow-xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#13b59b]/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 relative z-10">
