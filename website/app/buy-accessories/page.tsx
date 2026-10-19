@@ -30,6 +30,36 @@ interface AccessoryItem {
 
 const ACCESSORIES: AccessoryItem[] = [
   {
+    id: 'acc-sugato-ultracharge',
+    title: 'Sugato Ultracharge 10,000mAh Magnetic Wireless Powerbank (Orange/Grey)',
+    category: 'Power Banks',
+    price: 1499,
+    mrp: 2999,
+    discount: 50,
+    rating: 4.8,
+    image: 'https://s3ng.cashify.in/cashify/store/product/83027d17bbbf4307a75cf09b5e7f30b4.webp',
+  },
+  {
+    id: 'acc-ambrane-pb12',
+    title: 'Ambrane Aerosync PB 12 10,000mAh 22.5W Fast Charging Powerbank',
+    category: 'Power Banks',
+    price: 1299,
+    mrp: 2499,
+    discount: 48,
+    rating: 4.7,
+    image: 'https://s3ng.cashify.in/cashify/product/img/xxhdpi/8c817a30-c2c4.jpg',
+  },
+  {
+    id: 'acc-sugato-hypercharger',
+    title: 'Sugato Hypercharger 10,000 mAh Dual Output Fast Powerbank',
+    category: 'Power Banks',
+    price: 1199,
+    mrp: 2299,
+    discount: 48,
+    rating: 4.6,
+    image: 'https://s3ng.cashify.in/cashify/store/product/compressed/b9bab9921c4e464fac731cbc5a860f04.webp',
+  },
+  {
     id: 'acc-65w-charger',
     title: 'Sellbar 65W GaN SuperVOOC Fast Charger (Type-C + USB-A)',
     category: 'Chargers',
