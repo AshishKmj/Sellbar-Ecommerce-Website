@@ -77,8 +77,9 @@ function ensureInitialized(): DatabaseState {
         parsed.refurbishedProducts.unshift(p);
         changed = true;
       } else {
-        // update with latest seed specs, images, prices and slug
-        parsed.refurbishedProducts[idx] = { ...parsed.refurbishedProducts[idx], ...p };
+        // update with latest seed specs, images, prices and slug while preserving live inventory stockCount
+        const liveStock = parsed.refurbishedProducts[idx].stockCount;
+        parsed.refurbishedProducts[idx] = { ...p, ...parsed.refurbishedProducts[idx], stockCount: liveStock };
         changed = true;
       }
     }
