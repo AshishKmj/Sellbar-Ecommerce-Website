@@ -17,8 +17,11 @@ website/build/
 *.tar.gz
 Sellbar.zip
 
-# Environment & logs
-.env*.local
+# Environment & secrets
+.env*
+website/.env*
+!.env.example
+!website/.env.example
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -29,5 +32,18 @@ yarn-error.log*
 Thumbs.db
 .agent/
 .agents/
+website/.agent/
+website/.agents/
 *.tsbuildinfo
+website/*.tsbuildinfo
 website/next-env.d.ts
+
+# Internal Agent Notes & Non-Production Files
+replica/
+website/replica/
+skills-lock.json
+website/skills-lock.json
+tests/
+website/tests/
+playwright.config.*
+website/playwright.config.*
