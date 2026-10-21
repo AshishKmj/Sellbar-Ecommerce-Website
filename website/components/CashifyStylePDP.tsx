@@ -9,12 +9,15 @@ import dynamic from 'next/dynamic';
 const ModelViewer = dynamic(() => import('@/components/ModelViewer'), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-full min-h-[360px] flex flex-col items-center justify-center bg-gray-50/50 rounded-2xl gap-3">
+    <div className="w-full h-full min-h-90 flex flex-col items-center justify-center bg-gray-50/50 rounded-2xl gap-3">
       <div className="w-8 h-8 border-3 border-[#13b59b] border-t-transparent rounded-full animate-spin" />
       <span className="text-xs font-semibold text-gray-500">Loading 3D Studio...</span>
     </div>
   ),
 });
+
+import AnimatedContent from '@/components/AnimatedContent';
+import LogoLoop from '@/components/LogoLoop';
 import {
   ShieldCheck,
   Truck,
@@ -53,6 +56,44 @@ interface CashifyStylePDPProps {
   product: RefurbishedProduct;
   related: RefurbishedProduct[];
 }
+
+const certifiedPartners = [
+  {
+    node: <ShieldCheck className="w-4 h-4 text-[#13b59b]" />,
+    title: '32-Step Quality Lab',
+    hoverColor: '#13b59b',
+  },
+  {
+    node: <Award className="w-4 h-4 text-amber-500" />,
+    title: 'BIS Certified Refurbished',
+    hoverColor: '#f59e0b',
+  },
+  {
+    node: <Truck className="w-4 h-4 text-indigo-500" />,
+    title: 'Bluedart & Delhivery Express',
+    hoverColor: '#6366f1',
+  },
+  {
+    node: <CreditCard className="w-4 h-4 text-sky-500" />,
+    title: '256-Bit Razorpay Protected',
+    hoverColor: '#0ea5e9',
+  },
+  {
+    node: <RotateCcw className="w-4 h-4 text-emerald-500" />,
+    title: '15-Day Instant Replacement',
+    hoverColor: '#10b981',
+  },
+  {
+    node: <Sparkles className="w-4 h-4 text-violet-500" />,
+    title: '100% Genuine OEM Parts',
+    hoverColor: '#8b5cf6',
+  },
+  {
+    node: <CheckCircle2 className="w-4 h-4 text-teal-600" />,
+    title: 'Battery Health >85% Tested',
+    hoverColor: '#0d9488',
+  },
+];
 
 export default function CashifyStylePDP({ product, related }: CashifyStylePDPProps) {
   const router = useRouter();
@@ -413,7 +454,7 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
 
                   {/* VIEW CONTAINER: 3D ModelViewer OR 2D Photo */}
                   {viewMode === '3d' ? (
-                    <div className="relative w-full h-[360px] sm:h-[440px] flex items-center justify-center">
+                    <div className="relative w-full h-90 sm:h-110 flex items-center justify-center">
                       <ModelViewer
                         url={model3dUrl}
                         width="100%"
@@ -474,9 +515,16 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                 </div>
               </div>
 
-              {/* 3 Trust Checkpoints below image (Matching Cashify Reference) */}
-              <div className="grid grid-cols-3 gap-3 mt-6 pt-6 border-t border-gray-100">
-                <div className="flex flex-col items-center text-center p-3 rounded-xl bg-gray-50/70 border border-gray-100">
+              {/* 3 Trust Checkpoints below image (Animated with React Bits AnimatedContent) */}
+              <AnimatedContent
+                distance={24}
+                direction="vertical"
+                duration={0.6}
+                stagger={0.08}
+                threshold={0.1}
+                className="grid grid-cols-3 gap-3 mt-6 pt-6 border-t border-gray-100"
+              >
+                <div className="flex flex-col items-center text-center p-3 rounded-xl bg-gray-50/70 border border-gray-100 hover:border-teal-200 transition">
                   <div className="w-10 h-10 rounded-full bg-[#e6f9f6] text-[#13b59b] flex items-center justify-center font-bold text-sm mb-1.5">
                     32
                   </div>
@@ -484,7 +532,7 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                   <div className="text-[11px] text-gray-500">Quality Check</div>
                 </div>
 
-                <div className="flex flex-col items-center text-center p-3 rounded-xl bg-gray-50/70 border border-gray-100">
+                <div className="flex flex-col items-center text-center p-3 rounded-xl bg-gray-50/70 border border-gray-100 hover:border-teal-200 transition">
                   <div className="w-10 h-10 rounded-full bg-[#e6f9f6] text-[#13b59b] flex items-center justify-center font-bold text-sm mb-1.5">
                     15
                   </div>
@@ -492,14 +540,14 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                   <div className="text-[11px] text-gray-500">Refund*</div>
                 </div>
 
-                <div className="flex flex-col items-center text-center p-3 rounded-xl bg-gray-50/70 border border-gray-100">
+                <div className="flex flex-col items-center text-center p-3 rounded-xl bg-gray-50/70 border border-gray-100 hover:border-teal-200 transition">
                   <div className="w-10 h-10 rounded-full bg-[#e6f9f6] text-[#13b59b] flex items-center justify-center font-bold text-sm mb-1.5">
                     06
                   </div>
                   <div className="text-xs font-bold text-gray-900 leading-tight">06 Months</div>
                   <div className="text-[11px] text-gray-500">Warranty</div>
                 </div>
-              </div>
+              </AnimatedContent>
 
               {/* Sticky Action CTA Buttons (Cashify Style) */}
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -993,6 +1041,33 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
         </div>
       </div>
 
+      {/* Verified Sellbar Guarantee & Partners Bar (React Bits LogoLoop) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <div className="bg-gradient-to-r from-teal-50/70 via-white to-gray-50/70 border border-teal-100 rounded-2xl p-4 sm:p-5 shadow-xs">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2.5 shrink-0 px-1">
+              <span className="flex h-2.5 w-2.5 rounded-full bg-[#13b59b] animate-pulse" />
+              <span className="text-xs font-black uppercase tracking-wider text-gray-900">
+                Verified Refurbished Standard:
+              </span>
+            </div>
+            <div className="w-full flex-1 overflow-hidden min-h-[32px]">
+              <LogoLoop
+                logos={certifiedPartners}
+                speed={50}
+                direction="left"
+                logoHeight={22}
+                gap={44}
+                labels="inline"
+                hoverSpeed={0}
+                scaleOnHover
+                ariaLabel="Sellbar Verified Quality Partners and Guarantees"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* ========================================================= */}
       {/* 6. "YOU MAY ALSO LIKE" CAROUSEL (Cashify Reference)       */}
       {/* ========================================================= */}
@@ -1011,7 +1086,14 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <AnimatedContent
+            distance={36}
+            direction="vertical"
+            duration={0.7}
+            stagger={0.06}
+            threshold={0.1}
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
+          >
             {related.map((item) => {
               const itemDiscount = Math.round(((item.mrpPrice - item.sellbarPrice) / item.mrpPrice) * 100);
               const savings = item.mrpPrice - item.sellbarPrice;
@@ -1020,7 +1102,7 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                 <Link
                   key={item.id}
                   href={`/buy-refurbished-mobile-phones/${item.slug}`}
-                  className="group block p-3.5 rounded-xl border border-gray-200 hover:border-[#13b59b] hover:shadow-lg transition bg-white flex flex-col justify-between"
+                  className="group p-3.5 rounded-xl border border-gray-200 hover:border-[#13b59b] hover:shadow-lg transition bg-white flex flex-col justify-between"
                 >
                   <div className="relative">
                     {/* Savings tag */}
@@ -1066,7 +1148,7 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                 </Link>
               );
             })}
-          </div>
+          </AnimatedContent>
         </div>
       </div>
 
