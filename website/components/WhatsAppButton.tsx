@@ -16,7 +16,7 @@ export default function WhatsAppButton() {
     >
       {/* Interactive Tooltip Card */}
       {showTooltip && (
-        <div className="bg-white text-gray-900 border border-emerald-100 shadow-2xl rounded-2xl p-3.5 max-w-[260px] animate-in fade-in slide-in-from-bottom-2 duration-200">
+        <div className="bg-white text-gray-900 border border-emerald-100 shadow-2xl rounded-2xl p-3.5 max-w-65 animate-in fade-in slide-in-from-bottom-2 duration-200">
           <div className="flex items-start justify-between gap-2 mb-2">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
