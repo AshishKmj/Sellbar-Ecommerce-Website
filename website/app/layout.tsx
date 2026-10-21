@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -71,7 +72,7 @@ const jsonLd = {
       ],
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+91-1800-735-5227',
+        telephone: '+91-77175-17777',
         contactType: 'customer service',
         areaServed: 'IN',
         availableLanguage: ['en', 'hi'],
@@ -115,6 +116,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

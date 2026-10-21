@@ -80,7 +80,7 @@ export default async function StoreCityPage({ params }: PageProps) {
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-gray-400 shrink-0" />
-              <span>+91 72900 68900 / 1800-123-4567</span>
+              <span>+91 77175 17777 (Call &amp; WhatsApp)</span>
             </div>
           </div>
 

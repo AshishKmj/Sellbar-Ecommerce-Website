@@ -54,7 +54,7 @@ export default function ContactPage() {
     },
     {
       q: 'How do I claim a warranty for a refurbished gadget or repaired screen?',
-      a: 'Simply raise a ticket through this contact form selecting "Warranty Claim" or call our toll-free line 1800-SELLBAR. Our technician will schedule a free doorstep visit for inspection and replacement.',
+      a: 'Simply raise a ticket through this contact form selecting "Warranty Claim", WhatsApp or call our helpline +91 77175 17777. Our technician will schedule a free doorstep visit for inspection and replacement.',
     },
   ];
 
@@ -108,20 +108,20 @@ export default function ContactPage() {
 
           <div className="pt-2 flex flex-wrap justify-center gap-3">
             <a
-              href="tel:18007355227"
+              href="tel:+917717517777"
               className="bg-white text-[#0d826e] hover:bg-slate-100 font-bold px-6 py-2.5 rounded-xl shadow-md text-xs transition flex items-center gap-2"
             >
               <PhoneCall className="w-4 h-4 text-[#13b59b]" />
-              Call Toll-Free: 1800-SELLBAR
+              Call: +91 77175 17777
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/917717517777?text=Hi%20Sellbar%2C%20I%20have%20an%20inquiry%20regarding%20orders%20or%20valuation."
               target="_blank"
               rel="noreferrer"
               className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-2.5 rounded-xl shadow-md text-xs transition flex items-center gap-2"
             >
               <MessageSquare className="w-4 h-4" />
-              Instant WhatsApp Chat
+              WhatsApp: +91 77175 17777
             </a>
           </div>
         </div>
@@ -134,8 +134,8 @@ export default function ContactPage() {
             <div className="w-10 h-10 rounded-xl bg-[#edf7f5] text-[#13b59b] flex items-center justify-center">
               <PhoneCall className="w-5 h-5" />
             </div>
-            <h3 className="font-bold text-sm text-slate-900">Toll-Free Helpline</h3>
-            <p className="text-xs text-slate-500">1800-SELLBAR (1800-735-5227)</p>
+            <h3 className="font-bold text-sm text-slate-900">Direct &amp; WhatsApp Helpline</h3>
+            <p className="text-xs text-slate-500 font-semibold">+91 77175 17777</p>
             <span className="text-[11px] font-bold text-emerald-600 block">
               Mon – Sun: 9:00 AM – 8:00 PM IST
             </span>

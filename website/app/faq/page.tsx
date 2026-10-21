@@ -395,17 +395,25 @@ export default function FAQPage() {
 
           <div className="flex flex-wrap gap-3 shrink-0">
             <a
-              href="tel:18007355227"
+              href="tel:+917717517777"
               className="bg-white text-slate-900 hover:bg-slate-100 font-bold px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 shadow-sm transition"
             >
               <PhoneCall className="w-4 h-4 text-[#13b59b]" />
-              1800-SELLBAR
+              Call: +91 77175 17777
+            </a>
+            <a
+              href="https://wa.me/917717517777?text=Hi%20Sellbar%2C%20I%20have%20a%20question%20regarding%20devices."
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#25D366] hover:bg-[#20ba59] text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 shadow-sm transition"
+            >
+              <MessageSquare className="w-4 h-4" />
+              WhatsApp: 7717517777
             </a>
             <Link
               href="/contact"
               className="bg-[#13b59b] hover:bg-[#0f957f] text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 shadow-sm transition"
             >
-              <MessageSquare className="w-4 h-4" />
               Contact Desk
             </Link>
           </div>

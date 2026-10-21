@@ -63,7 +63,10 @@ interface Slot {
   digit: number;
   text: string;
   rank: number;
-  start?: number;
+}
+
+interface ActiveSlot extends Slot {
+  start: number;
 }
 
 const slotsFor = (formatter: Intl.NumberFormat, digits: string[], value: number): Slot[] => {
@@ -224,7 +227,7 @@ export default function Counter({
   const digits = useMemo(() => digitsFor(formatter), [formatter]);
   const slots = useMemo(() => slotsFor(formatter, digits, amount), [formatter, digits, amount]);
   const label = useMemo(() => formatter.format(amount), [formatter, amount]);
-  const [list, setList] = useState<Slot[]>(() =>
+  const [list, setList] = useState<ActiveSlot[]>(() =>
     slots.map(slot => ({ ...slot, start: slot.kind === 'digit' ? slot.digit : 0 }))
   );
 
@@ -418,7 +421,7 @@ export default function Counter({
     });
     setList(previous => {
       const known = new Map(previous.map(slot => [slot.key, slot]));
-      const merged = slots.map(slot => ({ ...slot, start: known.get(slot.key)?.start ?? 0 }));
+      const merged: ActiveSlot[] = slots.map(slot => ({ ...slot, start: known.get(slot.key)?.start ?? 0 }));
       previous.forEach(slot => {
         if (!next.has(slot.key)) merged.push(slot);
       });
