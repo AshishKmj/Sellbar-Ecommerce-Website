@@ -91,8 +91,14 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
     const el = ref.current;
     if (!el) return undefined;
 
-    let scroller: Element | Window | null = container || document.getElementById('snap-main-container') || null;
-    if (typeof scroller === 'string') scroller = document.querySelector(scroller);
+    let scroller: Element | Window | null = null;
+    if (typeof container === 'string') {
+      scroller = document.querySelector(container);
+    } else if (container) {
+      scroller = container;
+    } else {
+      scroller = document.getElementById('snap-main-container') || null;
+    }
 
     const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 

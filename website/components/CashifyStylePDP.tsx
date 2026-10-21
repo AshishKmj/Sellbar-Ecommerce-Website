@@ -18,6 +18,7 @@ const ModelViewer = dynamic(() => import('@/components/ModelViewer'), {
 
 import AnimatedContent from '@/components/AnimatedContent';
 import LogoLoop from '@/components/LogoLoop';
+import Counter from '@/components/Counter';
 import {
   ShieldCheck,
   Truck,
@@ -596,14 +597,30 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                 </div>
               </div>
 
-              {/* Pricing Box */}
+              {/* Pricing Box with React Bits Counter */}
               <div className="bg-[#f8fafb] border border-gray-200/80 rounded-xl p-4">
                 <div className="flex items-baseline gap-3 flex-wrap">
-                  <span className="bg-rose-50 text-rose-600 font-bold text-xs px-2 py-1 rounded">
-                    -{discountPercent}%
+                  <span className="bg-rose-50 text-rose-600 font-bold text-xs px-2 py-1 rounded inline-flex items-center gap-0.5">
+                    <span>-</span>
+                    <Counter
+                      value={discountPercent}
+                      fontSize={12}
+                      fontWeight={700}
+                      duration={0.5}
+                      direction="auto"
+                      suffix="%"
+                    />
                   </span>
-                  <span className="text-3xl font-black text-gray-900">
-                    ₹{effectivePrice.toLocaleString('en-IN')}
+                  <span className="text-3xl font-black text-gray-900 inline-flex items-baseline">
+                    <Counter
+                      value={effectivePrice}
+                      fontSize="1.875rem"
+                      fontWeight={900}
+                      prefix="₹"
+                      locale="en-IN"
+                      duration={0.6}
+                      direction="auto"
+                    />
                   </span>
                   <span className="text-base text-gray-400 line-through font-normal">
                     ₹{baseMrpPrice.toLocaleString('en-IN')}
@@ -613,7 +630,18 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                 {/* EMI Subtext */}
                 <div className="mt-2 text-xs text-gray-600 flex items-center gap-1.5 flex-wrap">
                   <CreditCard className="w-3.5 h-3.5 text-[#13b59b]" />
-                  <span className="font-semibold text-gray-900">₹{emiPerMonth.toLocaleString('en-IN')}/month</span>
+                  <span className="font-semibold text-gray-900 inline-flex items-center">
+                    <Counter
+                      value={emiPerMonth}
+                      fontSize={12}
+                      fontWeight={600}
+                      prefix="₹"
+                      suffix="/month"
+                      locale="en-IN"
+                      duration={0.6}
+                      direction="auto"
+                    />
+                  </span>
                   <span>EMI available.</span>
                   <button
                     type="button"
@@ -1043,7 +1071,7 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
 
       {/* Verified Sellbar Guarantee & Partners Bar (React Bits LogoLoop) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-        <div className="bg-gradient-to-r from-teal-50/70 via-white to-gray-50/70 border border-teal-100 rounded-2xl p-4 sm:p-5 shadow-xs">
+        <div className="bg-linear-to-r from-teal-50/70 via-white to-gray-50/70 border border-teal-100 rounded-2xl p-4 sm:p-5 shadow-xs">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2.5 shrink-0 px-1">
               <span className="flex h-2.5 w-2.5 rounded-full bg-[#13b59b] animate-pulse" />
@@ -1051,7 +1079,7 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                 Verified Refurbished Standard:
               </span>
             </div>
-            <div className="w-full flex-1 overflow-hidden min-h-[32px]">
+            <div className="w-full flex-1 overflow-hidden min-h-8">
               <LogoLoop
                 logos={certifiedPartners}
                 speed={50}
