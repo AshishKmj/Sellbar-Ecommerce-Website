@@ -4,6 +4,17 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
+
+const ModelViewer = dynamic(() => import('@/components/ModelViewer'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full min-h-[360px] flex flex-col items-center justify-center bg-gray-50/50 rounded-2xl gap-3">
+      <div className="w-8 h-8 border-3 border-[#13b59b] border-t-transparent rounded-full animate-spin" />
+      <span className="text-xs font-semibold text-gray-500">Loading 3D Studio...</span>
+    </div>
+  ),
+});
 import {
   ShieldCheck,
   Truck,
@@ -46,8 +57,11 @@ interface CashifyStylePDPProps {
 export default function CashifyStylePDP({ product, related }: CashifyStylePDPProps) {
   const router = useRouter();
 
-  // Active image index
+  // Active image index & 3D viewer mode (defaults to 3D interactive view)
   const [activeImgIdx, setActiveImgIdx] = useState(0);
+  const [viewMode, setViewMode] = useState<'3d' | 'photos'>('3d');
+  const [autoRotate3D, setAutoRotate3D] = useState(true);
+  const model3dUrl = product.model3dUrl || (product.categoryId === 'cat-accessories' ? '/assets/3d/sneaker.glb' : '/assets/3d/smartphone.glb');
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
 
@@ -288,15 +302,38 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
               
               <div className="flex flex-col-reverse sm:flex-row gap-4 items-start">
                 
-                {/* Thumbnails vertical strip */}
+                {/* Thumbnails vertical strip with 3D Interactive first */}
                 <div className="flex sm:flex-col gap-2.5 overflow-x-auto sm:overflow-visible shrink-0 w-full sm:w-20">
+                  {/* 3D 360° Studio Thumbnail Button */}
+                  <button
+                    type="button"
+                    onClick={() => setViewMode('3d')}
+                    className={`relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border-2 transition p-1.5 flex flex-col items-center justify-center gap-1 cursor-pointer ${
+                      viewMode === '3d'
+                        ? 'border-[#13b59b] bg-teal-50/70 text-[#13b59b] shadow-xs ring-2 ring-[#13b59b]/20'
+                        : 'border-gray-200 bg-white hover:border-gray-400 text-gray-600'
+                    }`}
+                    title="Interactive 3D 360° View"
+                  >
+                    <div className={`p-1.5 rounded-lg ${viewMode === '3d' ? 'bg-[#13b59b] text-white shadow-xs' : 'bg-gray-100 text-gray-600'}`}>
+                      <Rotate3d className={`w-4 h-4 ${viewMode === '3d' && autoRotate3D ? 'animate-spin' : ''}`} style={{ animationDuration: '8s' }} />
+                    </div>
+                    <span className="text-[10px] font-bold tracking-tight uppercase leading-none">3D View</span>
+                  </button>
+
+                  {/* Standard Photo Thumbnails */}
                   {images.map((img, idx) => (
                     <button
                       key={idx}
                       type="button"
-                      onClick={() => setActiveImgIdx(idx)}
+                      onClick={() => {
+                        setActiveImgIdx(idx);
+                        setViewMode('photos');
+                      }}
                       className={`relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border-2 transition p-1 bg-white cursor-pointer ${
-                        activeImgIdx === idx ? 'border-[#13b59b] shadow-xs' : 'border-gray-200 hover:border-gray-400'
+                        viewMode === 'photos' && activeImgIdx === idx
+                          ? 'border-[#13b59b] shadow-xs ring-2 ring-[#13b59b]/20'
+                          : 'border-gray-200 hover:border-gray-400'
                       }`}
                     >
                       <Image
@@ -310,11 +347,11 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                   ))}
                 </div>
 
-                {/* Main Image Viewport with Badges & Share/Wishlist */}
-                <div className="relative flex-1 w-full bg-[#fbfcfc] rounded-2xl border border-gray-100 flex items-center justify-center p-6 min-h-90 sm:min-h-115">
+                {/* Main Image Viewport with Badges, 3D Canvas & Share/Wishlist */}
+                <div className="relative flex-1 w-full bg-[#fbfcfc] rounded-2xl border border-gray-100 flex items-center justify-center p-4 sm:p-6 min-h-100 sm:min-h-120 overflow-hidden">
                   
                   {/* Grade / Assured Badge on Top-Left */}
-                  <div className="absolute top-4 left-4 z-10 flex flex-col gap-1.5">
+                  <div className="absolute top-4 left-4 z-20 flex flex-col gap-1.5 pointer-events-none">
                     <span className="inline-flex items-center gap-1.5 bg-[#13b59b] text-white text-xs font-bold px-3 py-1 rounded-full shadow-xs">
                       <ShieldCheck className="w-3.5 h-3.5" />
                       Sellbar Assured
@@ -324,13 +361,41 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                     </span>
                   </div>
 
+                  {/* Center Mode Switcher Pill */}
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 flex items-center bg-white/95 backdrop-blur-md border border-gray-200/90 shadow-xs rounded-full p-0.5">
+                    <button
+                      type="button"
+                      onClick={() => setViewMode('3d')}
+                      className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold transition cursor-pointer ${
+                        viewMode === '3d'
+                          ? 'bg-[#13b59b] text-white shadow-xs'
+                          : 'text-gray-600 hover:text-gray-900'
+                      }`}
+                    >
+                      <Rotate3d className="w-3.5 h-3.5" />
+                      <span>3D 360°</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setViewMode('photos')}
+                      className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold transition cursor-pointer ${
+                        viewMode === 'photos'
+                          ? 'bg-gray-900 text-white shadow-xs'
+                          : 'text-gray-600 hover:text-gray-900'
+                      }`}
+                    >
+                      <Layers className="w-3.5 h-3.5" />
+                      <span>Photos</span>
+                    </button>
+                  </div>
+
                   {/* Actions on Top-Right: Share & Wishlist */}
-                  <div className="absolute top-4 right-4 z-10 flex items-center gap-2">
+                  <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
                     <button
                       type="button"
                       onClick={handleShare}
                       title="Share product"
-                      className="p-2 rounded-full bg-white/90 hover:bg-white border border-gray-200 text-gray-600 hover:text-[#13b59b] shadow-xs transition"
+                      className="p-2 rounded-full bg-white/90 hover:bg-white border border-gray-200 text-gray-600 hover:text-[#13b59b] shadow-xs transition cursor-pointer"
                     >
                       <Share2 className="w-4 h-4" />
                     </button>
@@ -338,7 +403,7 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                       type="button"
                       onClick={() => setIsWishlisted(!isWishlisted)}
                       title="Add to Wishlist"
-                      className={`p-2 rounded-full bg-white/90 hover:bg-white border border-gray-200 shadow-xs transition ${
+                      className={`p-2 rounded-full bg-white/90 hover:bg-white border border-gray-200 shadow-xs transition cursor-pointer ${
                         isWishlisted ? 'text-rose-500 fill-rose-500' : 'text-gray-600 hover:text-rose-500'
                       }`}
                     >
@@ -346,17 +411,66 @@ export default function CashifyStylePDP({ product, related }: CashifyStylePDPPro
                     </button>
                   </div>
 
-                  {/* Main Display Image */}
-                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 transition-transform duration-300 hover:scale-105">
-                    <Image
-                      src={images[activeImgIdx] || images[0]}
-                      alt={product.title}
-                      fill
-                      priority
-                      className="object-contain"
-                      sizes="(max-width: 768px) 100vw, 400px"
-                    />
-                  </div>
+                  {/* VIEW CONTAINER: 3D ModelViewer OR 2D Photo */}
+                  {viewMode === '3d' ? (
+                    <div className="relative w-full h-[360px] sm:h-[440px] flex items-center justify-center">
+                      <ModelViewer
+                        url={model3dUrl}
+                        width="100%"
+                        height="100%"
+                        environment="studio"
+                        environmentIntensity={1.2}
+                        exposure={1}
+                        autoRotate={autoRotate3D}
+                        autoRotateSpeed={0.5}
+                        autoRotateDelay={2}
+                        dragRotate={true}
+                        turntable={false}
+                        zoom={true}
+                        shadow={true}
+                        shadowOpacity={0.45}
+                        hoverTilt={0.15}
+                        float={0.25}
+                        fit={0.82}
+                        className="w-full h-full"
+                      />
+
+                      {/* 3D Interactive Helper Tooltip at bottom */}
+                      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 pointer-events-none bg-white/95 border border-gray-200 backdrop-blur-md text-gray-700 text-[11px] font-medium px-3.5 py-1 rounded-full shadow-xs flex items-center gap-2 whitespace-nowrap z-10">
+                        <RotateCcw className="w-3.5 h-3.5 text-[#13b59b] animate-spin" style={{ animationDuration: '6s' }} />
+                        <span>Drag to rotate 360° • Pinch/Scroll to zoom • Double-click to reset</span>
+                      </div>
+
+                      {/* 3D Controls Top-Right beneath Share/Heart */}
+                      <div className="absolute top-14 right-4 z-20 flex flex-col gap-1.5">
+                        <button
+                          type="button"
+                          onClick={() => setAutoRotate3D(!autoRotate3D)}
+                          className={`text-[11px] font-semibold px-2.5 py-1 rounded-lg border shadow-xs transition flex items-center gap-1.5 cursor-pointer ${
+                            autoRotate3D
+                              ? 'bg-teal-50 border-teal-200 text-[#13b59b]'
+                              : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
+                          }`}
+                          title="Toggle Auto Rotation"
+                        >
+                          <RotateCcw className={`w-3 h-3 ${autoRotate3D ? 'animate-spin' : ''}`} style={{ animationDuration: '6s' }} />
+                          <span>{autoRotate3D ? 'Auto-Turn ON' : 'Paused'}</span>
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    /* Main 2D Display Image */
+                    <div className="relative w-64 h-64 sm:w-80 sm:h-80 transition-transform duration-300 hover:scale-105">
+                      <Image
+                        src={images[activeImgIdx] || images[0]}
+                        alt={product.title}
+                        fill
+                        priority
+                        className="object-contain"
+                        sizes="(max-width: 768px) 100vw, 400px"
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
 
